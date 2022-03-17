@@ -11,6 +11,7 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 
 	local username = game:GetService("Players").LocalPlayer.Name
 	local userid = game:GetService("Players").LocalPlayer.UserId
+	local icon = "https://www.roblox.com/headshot-thumbnail/image?userId="..userid.."&width=420&height=420&format=png"
 
 	local Library = require(game:GetService("ReplicatedStorage").Framework.Library)
 	local IDToName = {}
@@ -33,17 +34,21 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 		local Time = os.date('!*t', OSTime)
 		local Webhook = _G.Webhook
 		local msg = {
-			["username"] = "A&J Gaming Hatch Bot",
+			["content"] = "",
 			["embeds"] = {
 				{
 					["color"] = tonumber(tostring("0x" .. Color)), --decimal
-					["title"] =  Formation .. " " .. Rarity .. " " .. Name,
+					["title"] = "",
 					["thumbnail"] = {
 						["url"] = Thumbnail
 					},
 					["description"] = username .. " just hatched a **" .. Formation .. " " .. Rarity .. "** " .. Name .. "!",
 					["fields"] = {},
-					["author"] = {},
+					["author"] = {
+						["name"] = username,
+						["url"] = "https://www.roblox.com/users/".. userid .."/profile",
+						["icon_url"] = icon,
+					},
 					["footer"] = {
 						["text"] = username .. "'s Egg Count: "..nth,
 					},
@@ -83,4 +88,4 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 		SendWebhook(child.Name)
 	end)
 end
-print('PSX Pet Hatcher V2.2.0, Maintained and Updated by A&J Gaming#1569') 
+print('PSX Pet Hatcher V2.2.0, Maintained and Updated by A&J Gaming#1569')
