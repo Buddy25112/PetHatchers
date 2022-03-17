@@ -1,3 +1,8 @@
+-- PSX Pet Hatcher (V2.2.0)
+-- Maintained and Updated by A&J Gaming#1569
+-- If you run into any bugs, let me know please!
+-- Enjoy the pet hatcher :)
+
 if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 	repeat wait() until game:GetService("Players")
 	repeat wait() until game:GetService("Players").LocalPlayer
@@ -78,3 +83,4 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 		SendWebhook(child.Name)
 	end)
 end
+print('PSX Pet Hatcher V2.2.0, Maintained and Updated by A&J Gaming#1569') 
