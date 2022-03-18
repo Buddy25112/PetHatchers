@@ -1,4 +1,4 @@
--- PSX Pet Hatcher (V2.2.0)
+-- PSX Pet Hatcher (V2.3.0)
 -- Maintained and Updated by A&J Gaming#1569
 -- If you run into any bugs, let me know please!
 -- Enjoy the pet hatcher :)
@@ -12,7 +12,7 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 	local username = game:GetService("Players").LocalPlayer.Name
 	local userid = game:GetService("Players").LocalPlayer.UserId
 	local icon = "https://www.roblox.com/headshot-thumbnail/image?userId="..userid.."&width=420&height=420&format=png"
-
+	
 	local Library = require(game:GetService("ReplicatedStorage").Framework.Library)
 	local IDToName = {}
 	local PettoRarity = {}
@@ -29,12 +29,12 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 		return eeee
 	end
 
-	function Send(Name, Nickname, Strength, Rarity, Thumbnail, Formation, Color, NewPowers, nth)
+	function Send(Name, Nickname, Strength, Rarity, Thumbnail, Formation, Color, NewPowers, nth, Hatchping)
 		local OSTime = os.time()
 		local Time = os.date('!*t', OSTime)
 		local Webhook = _G.Webhook
 		local msg = {
-			["content"] = "",
+			["content"] = Hatchping,
 			["embeds"] = {
 				{
 					["color"] = tonumber(tostring("0x" .. Color)), --decimal
@@ -72,20 +72,28 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 				local Strength = v.s or {'???'}
 				local Powers = v.powers or {}
 				local Rarity = PettoRarity[v.id]
+				local Basicrarity = _G.Basicping
+				local Rarerarity = _G.Rareping
+				local Epicrarity = _G.Epicping
+				local Legendaryrarity = _G.Legendaryping
+				local Mythicalrarity = _G.Mythicalping
+				local Exclusiverarity = _G.Exclusiveping
+				local Hatchping = (Rarity == 'Basic' and Basicrarity) or (Rarity == 'Rare' and Rarerarity) or (Rarity == 'Epic' and Epicrarity) or (Rarity == 'Legendary' and Legendaryrarity) or (Rarity == 'Mythical' and Mythicalrarity) or (Rarity == 'Exclusive' and Exclusiverarity)
 				local Color = (Rarity == 'Mythical' and "ff8c00") or (Rarity == 'Legendary' and "ff45f6") or (Rarity == 'Epic' and "ffea47") or (Rarity == 'Rare' and "42ff5e") or (Rarity == 'Basic' and "b0b0b0") or (Rarity == 'Exclusive' and "d06bff")
 				local NewPowers = {}
 				for a,b in pairs(Powers) do
 					local eeeeeeee = tostring(b[1] .. " " .. b[2])
 					table.insert(NewPowers, eeeeeeee)
 				end
-				Send(Name, Nickname, Library.Functions.Commas(Strength), Rarity, Thumbnail, Formation, Color, NewPowers, nth)
+				Send(Name, Nickname, Library.Functions.Commas(Strength), Rarity, Thumbnail, Formation, Color, NewPowers, nth, Hatchping)
 			end
 		end
 	end
-
+    
+    
 	if _G.Connection then _G.Connection:Disconnect() end
 	_G.Connection = game:GetService("Players").LocalPlayer.PlayerGui.Inventory.Frame.Main.Pets.ChildAdded:Connect(function(child)
 		SendWebhook(child.Name)
 	end)
 end
-print('PSX Pet Hatcher V2.2.0, Maintained and Updated by A&J Gaming#1569')
+print('PSX Pet Hatcher V2.3.0, Maintained and Updated by A&J Gaming#1569')
