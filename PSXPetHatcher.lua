@@ -72,7 +72,7 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 				local Strength = v.s or {'???'}
 				local Powers = v.powers or {}
 				local Rarity = PettoRarity[v.id]
-                                local chance = (Name == '404 Demon' and "0.0035")
+				local chance = (Name == '404 Demon' and "0.0035")
 				local Basicrarity = _G.Basicping
 				local Rarerarity = _G.Rareping
 				local Epicrarity = _G.Epicping
