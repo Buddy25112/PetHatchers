@@ -1,4 +1,4 @@
--- PSX Pet Hatcher (V2.3.1)
+-- PSX Pet Hatcher (V2.3.2)
 -- Maintained and Updated by A&J Gaming#1569
 -- If you run into any bugs, let me know please!
 -- Enjoy the pet hatcher :)
@@ -50,7 +50,7 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 						["icon_url"] = icon,
 					},
 					["footer"] = {
-						["text"] = username .. "'s Egg Count: "..nth,
+						["text"] = "Egg #" .. nth .. " | " .. Rarity,
 					},
 					['timestamp'] = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec),
 				}
@@ -96,4 +96,4 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 		SendWebhook(child.Name)
 	end)
 end
-print('PSX Pet Hatcher V2.3.1, Maintained and Updated by A&J Gaming#1569')
+print('PSX Pet Hatcher V2.3.2, Maintained and Updated by A&J Gaming#1569')
