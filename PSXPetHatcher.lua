@@ -42,7 +42,7 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 					["thumbnail"] = {
 						["url"] = Thumbnail
 					},
-					["description"] = username .. " just hatched a **" .. Formation .. " " .. Rarity .. " " .. Name .. "**! (**" .. chance .. "%**),
+					["description"] = username .. " just hatched a **" .. Formation .. " " .. Rarity .. " " .. Name .. "**! (**" .. chance .. "%**)",
 					["fields"] = {},
 					["author"] = {
 						["name"] = username,
