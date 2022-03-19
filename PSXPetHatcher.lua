@@ -1,4 +1,4 @@
--- PSX Pet Hatcher (V2.4.0)
+-- PSX Pet Hatcher (V2.4.1)
 -- Maintained and Updated by A&J Gaming#1569
 -- If you run into any bugs, let me know please!
 -- Enjoy the pet hatcher :)
@@ -12,6 +12,18 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 	local username = game:GetService("Players").LocalPlayer.Name
 	local userid = game:GetService("Players").LocalPlayer.UserId
 	local icon = "https://www.roblox.com/headshot-thumbnail/image?userId="..userid.."&width=420&height=420&format=png"
+	
+	function abb(Value)
+		local Number
+		local Formatted = Value
+		while true do
+        		Formatted, Number = string.gsub(Formatted, "^(-?%d+)(%d%d%d)", '%1,%2')
+        		if (Number == 0) then
+            			break
+        		end
+    		end
+    		return Formatted
+	end
 	
 	local Library = require(game:GetService("ReplicatedStorage").Framework.Library)
 	local IDToName = {}
@@ -50,7 +62,7 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 						["icon_url"] = icon,
 					},
 					["footer"] = {
-						["text"] = "Egg #" .. nth .. " | " .. Rarity,
+						["text"] = "Egg #" .. abb(nth) .. " | " .. Rarity,
 					},
 					['timestamp'] = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec),
 				}
@@ -98,4 +110,4 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 		SendWebhook(child.Name)
 	end)
 end
-print('PSX Pet Hatcher V2.4.0, Maintained and Updated by A&J Gaming#1569')
+print('PSX Pet Hatcher V2.4.1, Maintained and Updated by A&J Gaming#1569')
