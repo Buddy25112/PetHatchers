@@ -41,7 +41,7 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 		return eeee
 	end
 
-	function Send(Name, Nickname, Strength, Rarity, Thumbnail, Formation, Color, NewPowers, nth, Hatchping, chance, PetImage)
+	function Send(Name, Nickname, Strength, Rarity, Thumbnail, Formation, Color, NewPowers, nth, Hatchping, chance, PetName)
 		local OSTime = os.time()
 		local Time = os.date('!*t', OSTime)
 		local Webhook = _G.Webhook
@@ -100,7 +100,7 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 					local eeeeeeee = tostring(b[1] .. " " .. b[2])
 					table.insert(NewPowers, eeeeeeee)
 				end
-				Send(Name, Nickname, Library.Functions.Commas(Strength), Rarity, Thumbnail, Formation, Color, NewPowers, nth, Hatchping, chance, PetImage)
+				Send(Name, Nickname, Library.Functions.Commas(Strength), Rarity, Thumbnail, Formation, Color, NewPowers, nth, Hatchping, chance, PetName)
 			end
 		end
 	end
