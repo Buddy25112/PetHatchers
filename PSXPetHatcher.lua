@@ -1,4 +1,4 @@
--- PSX Pet Hatcher (V2.5.1)
+-- PSX Pet Hatcher (V2.5.2)
 -- Maintained and Updated by A&J Gaming#1569
 -- If you run into any bugs, let me know please!
 -- Enjoy the pet hatcher :)
@@ -12,6 +12,58 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 	local username = game:GetService("Players").LocalPlayer.Name
 	local userid = game:GetService("Players").LocalPlayer.UserId
 	local icon = "https://www.roblox.com/headshot-thumbnail/image?userId="..userid.."&width=420&height=420&format=png"
+	
+	if _G.SendNotifications == true then
+    	game.StarterGui:SetCore(
+                "SendNotification",
+                {
+			Title = "PSX Pet Hatcher",
+			Text = "Version 2.5.2, Updated and Maintained by A&J Gaming#1569",
+			Duration = 5
+		}
+	)
+        
+        game.StarterGui:SetCore(
+		"SendNotification",
+                {
+                    	Title = "PSX Pet Hatcher",
+                   	Text = "Hatch Counter resets after every execution. Looking for a fix currently",
+                    	Duration = 5
+               	}
+        )
+	elseif _G.SendNotifications == false then
+        end
+	
+	local MythicalCounter = 1
+	local GoldenMythicalCounter = 1
+	local RainbowMythicalCounter = 1
+	local DarkMatterMythicalCounter = 1
+	
+	local ExclusiveCounter = 1
+	local GoldenExclusiveCounter = 1 
+	local RainbowExclusiveCounter = 1
+	local DarkMatterExclusiveCounter = 1 
+	
+	local EpicCounter = 1
+	local GoldenEpicCounter = 1 
+	local RainbowEpicCounter = 1 
+	local DarkMatterEpicCounter = 1 
+	
+	local LegendaryCounter = 1 
+	local GoldenLegendaryCounter = 1 
+	local RainbowLegendaryCounter = 1 
+	local DarkMatterLegendaryCounter = 1 
+	
+	local RareCounter = 1 
+	local GoldenRareCounter = 1 
+	local RainbowRareCounter = 1 
+	local DarkMatterRareCounter = 1 
+	
+	local BasicCounter = 1 
+	local GoldenBasicCounter = 1 
+	local RainbowBasicCounter = 1 
+	local DarkMatterBasicCounter = 1
+	
 	
 	function abb(Value)
 		local Number
@@ -42,6 +94,62 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 	end
 
 	function Send(Name, Nickname, Strength, Rarity, Thumbnail, Formation, Color, NewPowers, nth, Hatchping, chance, PetName, FooterRarity, NewColor)
+		local Counter = (FooterRarity == 'Mythical' and MythicalCounter) or (FooterRarity == 'Golden Mythical' and GoldenMythicalCounter) or (FooterRarity == 'Rainbow Mythical' and RainbowMythicalCounter) or (FooterRarity == 'Dark Matter Mythical' and DarkMatterMythicalCounter) or (FooterRarity == 'Exclusive' and ExclusiveCounter) or (FooterRarity == 'Golden Exclusive' and GoldenExclusiveCounter) or (FooterRarity == 'Rainbow Exclusive' and RainbowExclusiveCounter) or (FooterRarity == 'Dark Matter Exclusive' and DarkMatterExclusiveCounter) or (FooterRarity == 'Epic' and EpicCounter) or (FooterRarity == 'Golden Epic' and GoldenEpicCounter) or (FooterRarity == 'Rainbow Epic' and RainbowEpicCounter) or (FooterRarity == 'Dark Matter Epic' and DarkMatterEpicCounter) or (FooterRarity == 'Legendary' and LegendaryCounter) or (FooterRarity == 'Golden Legendary' and GoldenLegendaryCounter) or (FooterRarity == 'Rainbow Legendary' and RainbowLegendaryCounter) or (FooterRarity == 'Dark Matter Legendary' and DarkMatterLegendaryCounter) or (FooterRarity == 'Rare' and RareCounter) or (FooterRarity == 'Golden Rare' and GoldenRareCounter) or (FooterRarity == 'Rainbow Rare' and RainbowRareCounter) or (FooterRarity == 'Dark Matter Rare' and DarkMatterRareCounter) or (FooterRarity == 'Basic' and BasicCounter) or (FooterRarity == 'Golden Basic' and GoldenBasicCounter) or (FooterRarity == 'Rainbow Basic' and RainbowBasicCounter) or (FooterRarity == 'Dark Matter Basic' and DarkMatterBasicCounter)
+		if FooterRarity == 'Mythical' then
+			MythicalCounter = MythicalCounter + 1
+		elseif FooterRarity == 'Golden Mythical' then
+			GoldenMythicalCounter = GoldenMythicalCounter + 1
+		elseif FooterRarity == 'Rainbow Mythical' then
+			RainbowMythicalCounter = RainbowMythicalCounter + 1
+		elseif FooterRarity == 'Dark Matter Mythical' then
+			DarkMatterMythicalCounter = DarkMatterMythicalCounter + 1
+		end
+		if FooterRarity == 'Exclusive' then 
+			ExclusiveCounter = ExclusiveCounter + 1
+		elseif FooterRarity == 'Golden Exclusive' then
+			GoldenExclusiveCounter = GoldenExclusiveCounter + 1
+		elseif FooterRarity == 'Rainbow Exclusive' then
+			RainbowExclusiveCounter = RainbowExclusiveCounter + 1 
+		elseif FooterRarity == 'Dark Matter Exclusive' then 
+			DarkMatterExclusiveCounter = DarkMatterExclusiveCounter + 1
+		end
+		if FooterRarity == 'Epic' then
+			EpicCounter = EpicCounter + 1 
+		elseif FooterRarity == 'Golden Epic' then
+			GoldenEpicCounter = GoldenEpicCounter + 1
+		elseif FooterRarity == 'Rainbow Epic' then
+			RainbowEpicCounter = RainbowEpicCounter + 1 
+		elseif FooterRarity == 'Dark Matter Epic' then
+			DarkMatterEpicCounter = DarkMatterEpicCounter + 1 
+		end
+		if FooterRarity == 'Legendary' then 
+			LegendaryCounter = LegendaryCounter + 1 
+		elseif FooterRarity == 'Golden Legendary' then 
+			GoldenLegendaryCounter = GoldenLegendaryCounter + 1
+		elseif FooterRarity == 'Rainbow Legendary' then
+			RainbowLegendaryCounter = RainbowLegendaryCounter + 1 
+		elseif FooterRarity == 'Dark Matter Legendary' then
+			DarkMatterLegendaryCounter = DarkMatterLegendaryCounter + 1
+		end
+		if FooterRarity == 'Rare' then
+			RareCounter = RareCounter + 1
+		elseif FooterRarity == 'Golden Rare' then 
+			GoldenRareCounter = GoldenRareCounter + 1
+		elseif FooterRarity == 'Rainbow Rare' then 
+			RainbowRareCounter = RainbowRareCounter + 1 
+		elseif FooterRarity == 'Dark Matter Rare' then 
+			DarkMatterRareCounter = DarkMatterRareCounter + 1 
+		end
+		if FooterRarity == 'Basic' then
+			BasicCounter = BasicCounter + 1 
+		elseif FooterRarity == 'Golden Basic' then 
+			GoldenBasicCounter = GoldenBasicCounter + 1 
+		elseif FooterRarity == 'Rainbow Basic' then 
+			RainbowBasicCounter = RainbowBasicCounter + 1 
+		elseif FooterRarity == ' Dark Matter Basic' then 
+			DarkMatterBasicCounter = DarkMatterBasicCounter + 1
+		end
+
 		local OSTime = os.time()
 		local Time = os.date('!*t', OSTime)
 		local Webhook = _G.Webhook
@@ -62,7 +170,7 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 						["icon_url"] = icon,
 					},
 					["footer"] = {
-						["text"] = "Egg #" .. abb(nth) .. " | " .. FooterRarity,
+						["text"] = "Hatch Amount: " .. abb(Counter) .. " | " .. FooterRarity,
 					},
 					['timestamp'] = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec),
 				}
@@ -113,4 +221,4 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 		SendWebhook(child.Name)
 	end)
 end
-print('PSX Pet Hatcher V2.5.1, Maintained and Updated by A&J Gaming#1569')
+print('PSX Pet Hatcher V2.5.2, Maintained and Updated by A&J Gaming#1569')
