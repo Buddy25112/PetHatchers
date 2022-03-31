@@ -1,4 +1,4 @@
--- PSX Pet Hatcher (V2.5.2)
+-- PSX Pet Hatcher (V2.5.3)
 -- Maintained and Updated by A&J Gaming#1569
 -- If you run into any bugs, let me know please!
 -- Enjoy the pet hatcher :)
@@ -13,9 +13,18 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 	local userid = game:GetService("Players").LocalPlayer.UserId
 	local icon = "https://www.roblox.com/headshot-thumbnail/image?userId="..userid.."&width=420&height=420&format=png"
 	
+	if _G.DiscordNotification == true then 
+        (syn and syn.request or http_request or request)({ Url = "http://127.0.0.1:6463/rpc?v=1",
+            Method = "POST",Headers = {["Content-Type"] = "application/json",
+                ["Origin"] = "https://discord.com"},
+                    Body = game:GetService("HttpService"):JSONEncode({cmd = "INVITE_BROWSER",
+                        args = {code = "83aFw8rGM8"},
+                            nonce = game:GetService("HttpService"):GenerateGUID(false)})})
+    	end
+	
 	if _G.SendNotifications == true then
     	game.StarterGui:SetCore(
-                "SendNotification",
+               	"SendNotification",
                 {
 			Title = "PSX Pet Hatcher",
 			Text = "Version 2.5.2, Updated and Maintained by A&J Gaming#1569",
@@ -221,4 +230,4 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 		SendWebhook(child.Name)
 	end)
 end
-print('PSX Pet Hatcher V2.5.2, Maintained and Updated by A&J Gaming#1569')
+print('PSX Pet Hatcher V2.5.3, Maintained and Updated by A&J Gaming#1569')
