@@ -1,4 +1,4 @@
--- PSX Pet Hatcher (V2.5.5)
+-- PSX Pet Hatcher (V2.5.6)
 -- Maintained and Updated by A&J Gaming#1569
 -- If you run into any bugs, let me know please!
 -- Enjoy the pet hatcher :)
@@ -27,7 +27,7 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
                	"SendNotification",
                 {
 			Title = "PSX Pet Hatcher",
-			Text = "Version 2.5.5, Updated and Maintained by A&J Gaming#1569",
+			Text = "Version 2.5.6, Updated and Maintained by A&J Gaming#1569",
 			Duration = 5
 		}
 	)
@@ -135,7 +135,7 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
     		    BasicCount = BasicCount + 1
     		end
 
-
+		local HatchAmountCounter = (_G.HatchAmount == true and "Hatch Amount: " .. abb(Counter)) or (_G.HatchAmount == false and "Pet Simulator X")
 		local OSTime = os.time()
 		local Time = os.date('!*t', OSTime)
 		local Webhook = _G.Webhook
@@ -156,7 +156,7 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 						["icon_url"] = icon,
 					},
 					["footer"] = {
-						["text"] = "Hatch Amount: " .. abb(Counter) .. " | " .. FooterRarity,
+						["text"] = HatchAmountCounter .. " | " .. FooterRarity,
 					},
 					['timestamp'] = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec),
 				}
@@ -207,4 +207,4 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 		SendWebhook(child.Name)
 	end)
 end
-print('PSX Pet Hatcher V2.5.5, Maintained and Updated by A&J Gaming#1569')
+print('PSX Pet Hatcher V2.5.6, Maintained and Updated by A&J Gaming#1569')
