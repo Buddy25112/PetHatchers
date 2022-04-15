@@ -71,7 +71,7 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 	end
 
 	function GetThumbnail(id, type)
-		if tostring(id) == "292" and type == 'Gold' then
+		if tostring(id) == "292" and type == 'Gold' then -- Ty for the help tense :D
             		local eeee = "https://cdn.discordapp.com/attachments/749822826365845544/964245077373382656/unknown.png"
             		return eeee
         	end
