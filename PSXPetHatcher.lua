@@ -71,6 +71,10 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 	end
 
 	function GetThumbnail(id, type)
+		if tostring(id) == "292" and type == 'Gold' then
+            		local eeee = "https://cdn.discordapp.com/attachments/749822826365845544/964245077373382656/unknown.png"
+            		return eeee
+        	end
 		local nailname = (type == 'Normal' or type == 'Rainbow' and 'thumbnail') or (type == 'Gold' and 'goldenThumbnail') or (type == 'Dark Matter' and 'darkMatterThumbnail')
 		local eeee = Library.Directory.Pets[tostring(id)][nailname] or Library.Directory.Pets[tostring(id)]["thumbnail"] 
 		local eeee = eeee:gsub("rbxassetid%:%/%/", "")
