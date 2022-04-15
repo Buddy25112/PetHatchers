@@ -1,4 +1,4 @@
--- PSX Pet Hatcher (V2.5.6)
+-- PSX Pet Hatcher (V2.5.7)
 -- Maintained and Updated by A&J Gaming#1569
 -- If you run into any bugs, let me know please!
 -- Enjoy the pet hatcher :)
@@ -27,7 +27,7 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
                	"SendNotification",
                 {
 			Title = "PSX Pet Hatcher",
-			Text = "Version 2.5.6, Updated and Maintained by A&J Gaming#1569",
+			Text = "Version 2.5.7, Updated and Maintained by A&J Gaming#1569",
 			Duration = 5
 		}
 	)
@@ -211,4 +211,4 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 		SendWebhook(child.Name)
 	end)
 end
-print('PSX Pet Hatcher V2.5.6, Maintained and Updated by A&J Gaming#1569')
+print('PSX Pet Hatcher V2.5.7, Maintained and Updated by A&J Gaming#1569')
