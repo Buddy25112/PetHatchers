@@ -1,4 +1,3 @@
-
 -- PSX Pet Hatcher (V2.5.8)
 -- Maintained and Updated by A&J Gaming#1569
 -- If you run into any bugs, let me know please!
