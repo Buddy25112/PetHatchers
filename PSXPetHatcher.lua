@@ -76,7 +76,11 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 		if tostring(id) == "292" and type == 'Gold' then -- Ty for the help tense :D
             		local eeee = "https://cdn.discordapp.com/attachments/749822826365845544/964245077373382656/unknown.png"
             		return eeee
+		elseif tostring(id) == "292" then
+			local eeee = "https://media.discordapp.net/attachments/750156768834879488/950290634332311572/420.png"
+            		return eeee
         	end
+		
 		local nailname = (type == 'Normal' or type == 'Rainbow' and 'thumbnail') or (type == 'Gold' and 'goldenThumbnail') or (type == 'Dark Matter' and 'darkMatterThumbnail')
 		local eeee = Library.Directory.Pets[tostring(id)][nailname] or Library.Directory.Pets[tostring(id)]["thumbnail"] 
 		local eeee = eeee:gsub("rbxassetid%:%/%/", "")
