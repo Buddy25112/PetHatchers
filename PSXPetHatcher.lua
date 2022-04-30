@@ -83,7 +83,7 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 			local eeee = "https://media.discordapp.net/attachments/750156768834879488/969854809500962816/unknown.png"
 			return eeee
 		elseif tostring(id) == "331" and type == 'Gold' then
-			local eeee == "https://media.discordapp.net/attachments/750156768834879488/969854714642563082/unknown.png"
+			local eeee = "https://media.discordapp.net/attachments/750156768834879488/969854714642563082/unknown.png"
 			return eeee
         	end
 		
