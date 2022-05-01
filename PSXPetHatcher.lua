@@ -221,7 +221,7 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 							["icon_url"] = icon,
 						},
 						["footer"] = {
-							["text"] = "Pet Simulator X Hatcher Logs | " .. abb(nth) .. " | " .. FooterRarity,
+							["text"] = "Pet Simulator X Hatcher Logs | Egg #" .. abb(nth) .. " | " .. FooterRarity,
 						},
 						['timestamp'] = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec),
 					}
