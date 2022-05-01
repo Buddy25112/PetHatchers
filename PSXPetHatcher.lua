@@ -85,6 +85,18 @@ if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then
 		elseif tostring(id) == "331" and type == 'Gold' then
 			local eeee = "https://media.discordapp.net/attachments/750156768834879488/969854714642563082/unknown.png"
 			return eeee
+		elseif tostring(id) == "288" then
+			local eeee = "https://cdn.discordapp.com/attachments/750156768834879488/970126329695596604/unknown.png"
+			return eeee
+		elseif tostring(id) == "288" and type == 'Gold' then
+			local eeee = "https://media.discordapp.net/attachments/750156768834879488/970127122607792148/unknown.png"
+			return eeee
+		elseif tostring(id) == "327" then
+			local eeee = "https://media.discordapp.net/attachments/750156768834879488/970127489554841660/unknown.png"
+			return eeee
+		elseif tostring(id) == "327" and type == 'Gold' then
+			local eeee = "https://media.discordapp.net/attachments/750156768834879488/970127693268008990/unknown.png"
+			return eeee
         	end
 		
 		local nailname = (type == 'Normal' or type == 'Rainbow' and 'thumbnail') or (type == 'Gold' and 'goldenThumbnail') or (type == 'Dark Matter' and 'darkMatterThumbnail')
