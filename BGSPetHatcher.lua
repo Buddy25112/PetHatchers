@@ -79,9 +79,13 @@ Chat.ChildAdded:Connect(function(instance)
             ['timestamp'] = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec),
             ["color"] = Hex,
             ["fields"] = {}},}}
-        local Info = game:GetService("HttpService"):JSONEncode(Info)
-        local HttpRequest = http_request;
-        if syn then HttpRequest = syn.request else HttpRequest = http_request end
-            HttpRequest({Url=Webhook, Body=Info, Method="POST", Headers=Headers})
+            (syn and syn.request or http_request) {
+                Url = Webhook;
+                Method = 'POST';
+                Headers = {
+                    ['Content-Type'] = 'application/json';
+                };
+                Body = game:GetService'HttpService':JSONEncode( { content = Content; embeds = { info } } );
+            };
     end
 end)
