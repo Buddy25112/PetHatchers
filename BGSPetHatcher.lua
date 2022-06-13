@@ -49,6 +49,7 @@ Chat.ChildAdded:Connect(function(instance)
             end
         end
         local OSTime = os.time()
+        local Webhook = _G.Webhook
         local Time = os.date('!*t', OSTime)
         local TextColor3 = instance.TextLabel.TextColor3
         local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
