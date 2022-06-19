@@ -415,7 +415,7 @@ Chat.ChildAdded:Connect(function(instance)
                         
                         elseif string.find(instance.TextLabel.Text,"Rainbow Shock") then
                             if string.find(instance.TextLabel.Text,"Shiny") then
-                                HatchText =  username .. " just hatched a **Shiny Legendary** **Rainbow Shock**! (**0.000001%**)"
+                                HatchText =  username .. " just hatched a **Shiny Legendary** **Rainbow Shock**! (**0.00001%**)"
                                 PetImage = ""
                                 if _G.SkipT3Hatches == true then
                                     Dontsend = true
@@ -423,7 +423,7 @@ Chat.ChildAdded:Connect(function(instance)
                                     Dontsend = false
                                 end
                             else
-                                HatchText = username .. " just hatched a **Legendary** **Rainbow Shock**! (**0.0001%**)"
+                                HatchText = username .. " just hatched a **Legendary** **Rainbow Shock**! (**0.001%**)"
                                 PetImage = ""
                                 if _G.SkipT3Hatches == true then
                                     Dontsend = true
