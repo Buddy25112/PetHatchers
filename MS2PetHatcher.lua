@@ -42,7 +42,7 @@ if _G.SendNotifications == true then
                	"SendNotification",
                 {
 			Title = "MS2 Pet Hatcher",
-			Text = "Version 1.0.1, Updated and Maintained by PetSimulatorXPlayer#5011",
+			Text = "Version 1.0.3, Updated and Maintained by PetSimulatorXPlayer#5011",
 			Duration = 5
 		}
 	)
@@ -240,24 +240,44 @@ Chat.ChildAdded:Connect(function(instance)
                             end
                         
                         elseif string.find(instance.TextLabel.Text,"Glitch") then
-                            if string.find(instance.TextLabel.Text,"Shiny") then
-                                HatchText =  username .. " just hatched a **Shiny Legendary** **Glitch**! (**0.001%**)"
-                                PetImage = "https://media.discordapp.net/attachments/750156768834879488/986823770624888862/Screenshot_2022-06-15_204214-removebg-preview.png"
-                                if _G.SkipT1Hatches == true then
-                                    Dontsend = true
+                            if string.find(instance.TextLabel.Text,"Cube") then
+                                if string.find(instance.TextLabel.Text,"Shiny") then
+                                    HatchText =  username .. " just hatched a **Shiny Legendary** **Glitched Cube**! (**0.0001%**)"
+                                    PetImage = ""
+                                    if _G.SkipT2Hatches == true then
+                                        Dontsend = true
+                                    else
+                                        Dontsend = false
+                                    end
                                 else
-                                    Dontsend = false
+                                    HatchText = username .. " just hatched a **Legendary** **Glitched Cube**! (**0.01%**)"
+                                    PetImage = ""
+                                    if _G.SkipT2Hatches == true then
+                                        Dontsend = true
+                                    else
+                                        Dontsend = false
+                                    end
                                 end
                             else
-                                HatchText = username .. " just hatched a **Legendary** **Glitch**! (**0.1%**)"
-                                PetImage = "https://media.discordapp.net/attachments/750156768834879488/986823770624888862/Screenshot_2022-06-15_204214-removebg-preview.png"
-                                if _G.SkipT1Hatches == true then
-                                    Dontsend = true
+                                if string.find(instance.TextLabel.Text,"Shiny") then
+                                    HatchText =  username .. " just hatched a **Shiny Legendary** **Glitch**! (**0.001%**)"
+                                    PetImage = "https://media.discordapp.net/attachments/750156768834879488/986823770624888862/Screenshot_2022-06-15_204214-removebg-preview.png"
+                                    if _G.SkipT1Hatches == true then
+                                        Dontsend = true
+                                    else
+                                        Dontsend = false
+                                    end
                                 else
-                                    Dontsend = false
+                                    HatchText = username .. " just hatched a **Legendary** **Glitch**! (**0.1%**)"
+                                    PetImage = "https://media.discordapp.net/attachments/750156768834879488/986823770624888862/Screenshot_2022-06-15_204214-removebg-preview.png"
+                                    if _G.SkipT1Hatches == true then
+                                        Dontsend = true
+                                    else
+                                        Dontsend = false
+                                    end
                                 end
                             end
-                        
+                            
                         elseif string.find(instance.TextLabel.Text,"Cyber Comet") then
                             if string.find(instance.TextLabel.Text,"Shiny") then
                                 HatchText =  username .. " just hatched a **Shiny Legendary** **Cyber Comet**! (**0.0001%**)"
@@ -278,21 +298,41 @@ Chat.ChildAdded:Connect(function(instance)
                             end
                         
                         elseif string.find(instance.TextLabel.Text,"Tetra Cube") then
-                            if string.find(instance.TextLabel.Text,"Shiny") then
-                                HatchText =  username .. " just hatched a **Shiny Legendary** **Tetra Cube**! (**0.00005%**)"
-                                PetImage = "https://media.discordapp.net/attachments/750156768834879488/986826694847524884/Screenshot_2022-06-15_205533-removebg-preview.png"
-                                if _G.SkipT3Hatches == true then
-                                    Dontsend = true
+                            if string.find(instance.TextLabel.Text,"Virus") then
+                                if string.find(instance.TextLabel.Text,"Shiny") then
+                                    HatchText =  username .. " just hatched a **Shiny Legendary** **Virus Cube**! (**0.001%**)"
+                                    PetImage = ""
+                                    if _G.SkipT1Hatches == true then
+                                        Dontsend = true
+                                    else
+                                        Dontsend = false
+                                    end
                                 else
-                                    Dontsend = false
+                                    HatchText = username .. " just hatched a **Legendary** **Virus Cube**! (**0.1%**)"
+                                    PetImage = ""
+                                    if _G.SkipT1Hatches == true then
+                                        Dontsend = true
+                                    else
+                                        Dontsend = false
+                                    end
                                 end
                             else
-                                HatchText = username .. " just hatched a **Legendary** **Tetra Cube**! (**0.005%**)"
-                                PetImage = "https://media.discordapp.net/attachments/750156768834879488/986826694847524884/Screenshot_2022-06-15_205533-removebg-preview.png"
-                                if _G.SkipT3Hatches == true then
-                                    Dontsend = true
+                                if string.find(instance.TextLabel.Text,"Shiny") then
+                                    HatchText =  username .. " just hatched a **Shiny Legendary** **Tetra Cube**! (**0.00005%**)"
+                                    PetImage = "https://media.discordapp.net/attachments/750156768834879488/986826694847524884/Screenshot_2022-06-15_205533-removebg-preview.png"
+                                    if _G.SkipT3Hatches == true then
+                                        Dontsend = true
+                                    else
+                                        Dontsend = false
+                                    end
                                 else
-                                    Dontsend = false
+                                    HatchText = username .. " just hatched a **Legendary** **Tetra Cube**! (**0.005%**)"
+                                    PetImage = "https://media.discordapp.net/attachments/750156768834879488/986826694847524884/Screenshot_2022-06-15_205533-removebg-preview.png"
+                                    if _G.SkipT3Hatches == true then
+                                        Dontsend = true
+                                    else
+                                        Dontsend = false
+                                    end
                                 end
                             end
                         
@@ -307,115 +347,79 @@ Chat.ChildAdded:Connect(function(instance)
                                 Dontsend = false
                             end
                         
-                        elseif string.find(instance.TextLabel.Text,"Virus Cube") then
-                            if string.find(instance.TextLabel.Text,"Shiny") then
-                                HatchText =  username .. " just hatched a **Shiny Legendary** **Virus Cube**! (**0.001%**)"
-                                PetImage = ""
-                                if _G.SkipT1Hatches == true then
-                                    Dontsend = true
-                                else
-                                    Dontsend = false
-                                end
-                            else
-                                HatchText = username .. " just hatched a **Legendary** **Virus Cube**! (**0.1%**)"
-                                PetImage = ""
-                                if _G.SkipT1Hatches == true then
-                                    Dontsend = true
-                                else
-                                    Dontsend = false
-                                end
-                            end
-                        
-                        elseif string.find(instance.TextLabel.Text,"Glitched Cube") then
-                            if string.find(instance.TextLabel.Text,"Shiny") then
-                                HatchText =  username .. " just hatched a **Shiny Legendary** **Glitched Cube**! (**0.0001%**)"
-                                PetImage = ""
-                                if _G.SkipT2Hatches == true then
-                                    Dontsend = true
-                                else
-                                    Dontsend = false
-                                end
-                            else
-                                HatchText = username .. " just hatched a **Legendary** **Glitched Cube**! (**0.01%**)"
-                                PetImage = ""
-                                if _G.SkipT2Hatches == true then
-                                    Dontsend = true
-                                else
-                                    Dontsend = false
-                                end
-                            end
-                        
                         elseif string.find(instance.TextLabel.Text,"CORE") then
-                            if string.find(instance.TextLabel.Text,"Shiny") then
-                                HatchText =  username .. " just hatched a **Shiny Legendary** **CORE**! (**0.00005%**)"
-                                PetImage = ""
-                                if _G.SkipT3Hatches == true then
-                                    Dontsend = true
+                            if string.find(instance.TextLabel.Text,"Virus") then
+                                if string.find(instance.TextLabel.Text,"Shiny") then
+                                    HatchText =  username .. " just hatched a **Shiny Secret** **Virus CORE**! (**4e-07%**)"
+                                    PetImage = ""
+                                    Dontsend = false
                                 else
+                                    HatchText =  username .. " just hatched a **Secret** **Virus CORE**! (**4e-05%**)"
+                                    PetImage = ""
                                     Dontsend = false
                                 end
                             else
-                                HatchText = username .. " just hatched a **Legendary** **CORE**! (**0.005%**)"
-                                PetImage = ""
-                                if _G.SkipT3Hatches == true then
-                                    Dontsend = true
+                                if string.find(instance.TextLabel.Text,"Shiny") then
+                                    HatchText =  username .. " just hatched a **Shiny Legendary** **CORE**! (**0.00005%**)"
+                                    PetImage = ""
+                                    if _G.SkipT3Hatches == true then
+                                        Dontsend = true
+                                    else
+                                        Dontsend = false
+                                    end
                                 else
-                                    Dontsend = false
+                                    HatchText = username .. " just hatched a **Legendary** **CORE**! (**0.005%**)"
+                                    PetImage = ""
+                                    if _G.SkipT3Hatches == true then
+                                        Dontsend = true
+                                    else
+                                        Dontsend = false
+                                    end
                                 end
-                            end
-                        
-                        elseif string.find(instance.TextLabel.Text,"Virus CORE") then
-                            if string.find(instance.TextLabel.Text,"Shiny") then
-                                HatchText =  username .. " just hatched a **Shiny Secret** **Virus CORE**! (**4e-07%**)"
-                                PetImage = ""
-                                Dontsend = false
-                            else
-                                HatchText =  username .. " just hatched a **Secret** **Virus CORE**! (**4e-05%**)"
-                                PetImage = ""
-                                Dontsend = false
                             end
                             
                         elseif string.find(instance.TextLabel.Text,"Holo Butterfly") then
-                            if string.find(instance.TextLabel.Text,"Shiny") then
-                                HatchText =  username .. " just hatched a **Shiny Legendary** **Holo Butterfly**! (**0.0002%**)"
-                                PetImage = ""
-                                if _G.SkipT1Hatches == true then
-                                    Dontsend = true
+                            if string.find(instance.TextLabel.Text,"corn") then
+                                if string.find(instance.TextLabel.Text,"Shiny") then
+                                    HatchText =  username .. " just hatched a **Shiny Legendary** **Holocorn**! (**0.00005%**)"
+                                    PetImage = ""
+                                    if _G.SkipT2Hatches == true then
+                                        Dontsend = true
+                                    else
+                                        Dontsend = false
+                                    end
                                 else
-                                    Dontsend = false
+                                    HatchText = username .. " just hatched a **Legendary** **Holocorn**! (**0.005%**)"
+                                    PetImage = ""
+                                    if _G.SkipT2Hatches == true then
+                                        Dontsend = true
+                                    else
+                                        Dontsend = false
+                                    end
                                 end
                             else
-                                HatchText = username .. " just hatched a **Legendary** **Holo Butterfly**! (**0.02%**)"
-                                PetImage = ""
-                                if _G.SkipT1Hatches == true then
-                                    Dontsend = true
+                                if string.find(instance.TextLabel.Text,"Shiny") then
+                                    HatchText =  username .. " just hatched a **Shiny Legendary** **Holo Butterfly**! (**0.0002%**)"
+                                    PetImage = ""
+                                    if _G.SkipT1Hatches == true then
+                                        Dontsend = true
+                                    else
+                                        Dontsend = false
+                                    end
                                 else
-                                    Dontsend = false
-                                end
-                            end
-                        
-                        elseif string.find(instance.TextLabel.Text,"Holocorn") then
-                            if string.find(instance.TextLabel.Text,"Shiny") then
-                                HatchText =  username .. " just hatched a **Shiny Legendary** **Holocorn**! (**0.00005%**)"
-                                PetImage = ""
-                                if _G.SkipT2Hatches == true then
-                                    Dontsend = true
-                                else
-                                    Dontsend = false
-                                end
-                            else
-                                HatchText = username .. " just hatched a **Legendary** **Holocorn**! (**0.005%**)"
-                                PetImage = ""
-                                if _G.SkipT2Hatches == true then
-                                    Dontsend = true
-                                else
-                                    Dontsend = false
+                                    HatchText = username .. " just hatched a **Legendary** **Holo Butterfly**! (**0.02%**)"
+                                    PetImage = ""
+                                    if _G.SkipT1Hatches == true then
+                                        Dontsend = true
+                                    else
+                                        Dontsend = false
+                                    end
                                 end
                             end
                         
                         elseif string.find(instance.TextLabel.Text,"Rainbow Shock") then
                             if string.find(instance.TextLabel.Text,"Shiny") then
-                                HatchText =  username .. " just hatched a **Shiny Legendary** **Rainbow Shock**! (**0.00001%**)"
+                                HatchText =  username .. " just hatched a **Shiny Legendary** **Rainbow Shock**! (**0.000001%**)"
                                 PetImage = ""
                                 if _G.SkipT3Hatches == true then
                                     Dontsend = true
@@ -423,7 +427,7 @@ Chat.ChildAdded:Connect(function(instance)
                                     Dontsend = false
                                 end
                             else
-                                HatchText = username .. " just hatched a **Legendary** **Rainbow Shock**! (**0.001%**)"
+                                HatchText = username .. " just hatched a **Legendary** **Rainbow Shock**! (**0.0001%**)"
                                 PetImage = ""
                                 if _G.SkipT3Hatches == true then
                                     Dontsend = true
@@ -537,4 +541,4 @@ Chat.ChildAdded:Connect(function(instance)
         end
     end
 end)
-print('MS2 Pet Hatcher V1.0.1, Maintained and Updated by PetSimulatorXPlayer#5011')
+print('MS2 Pet Hatcher V1.0.3, Maintained and Updated by PetSimulatorXPlayer#5011')
