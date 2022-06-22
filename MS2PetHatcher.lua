@@ -396,9 +396,8 @@ Chat.ChildAdded:Connect(function(instance)
                                         Dontsend = false
                                     end
                                 end
-                            end
 							
-			elseif string.find(instance.TextLabel.Text,"Holocorn") then
+			            elseif string.find(instance.TextLabel.Text,"Holocorn") then
                                 if string.find(instance.TextLabel.Text,"Shiny") then
                                     HatchText =  username .. " just hatched a **Shiny Legendary** **Holocorn**! (**0.00005%**)"
                                     PetImage = ""
