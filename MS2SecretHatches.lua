@@ -189,11 +189,21 @@ Chat.ChildAdded:Connect(function(instance)
                             TitleFinder = "A Shiny Secret was just hatched!"
                             FooterFinder = "Shiny Secret"
                             NewColor = "F7FF00"
-                        else
+                        elseif string.find(instance.TextLabel.Text,"Secret") then
                             SecretPing = "<@&803012562878726174>, a **Secret** has been hatched!"
                             TitleFinder = "A Secret was just hatched!"
                             FooterFinder = "Secret"
                             NewColor = "FF00E6"
+                        elseif string.find(instance.TextLabel.Text,"ANCIENT Shiny") then
+                            SecretPing = "<@&928384646595641404> <@&803012562878726174>, a **Shiny** **Ancient** has been hatched!"
+                            TitleFinder = "A Shiny Ancient was just hatched!"
+                            FooterFinder = "Shiny Ancient"
+                            NewColor = "F7FF00"
+                        elseif string.find(instance.TextLabel.Text,"ANCIENT") then
+                            SecretPing = "<@&928384646595641404> <@&803012562878726174>, an **Ancient** has been hatched!"
+                            TitleFinder = "An Ancient was just hatched!"
+                            FooterFinder = "Ancient"
+                            NewColor = "00ff00"
                         end
                         
                         -- The Webhook
