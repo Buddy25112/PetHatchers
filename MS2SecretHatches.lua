@@ -44,6 +44,18 @@ Chat.ChildAdded:Connect(function(instance)
                             elseif string.find(instance.TextLabel.Text, "AJ_GamingYYTT") then
                                 OnlyCount1 = "AJ_GamingYYTT"
                                 username = game:GetService("Players").AJ_GamingYYTT.Name
+                                
+                            elseif string.find(instance.TextLabel.Text, "BuddyHatchAlt5") then
+                                OnlyCount1 = "BuddyHatchAlt5"
+                                username = game:GetService("Players").BuddyHatchAlt5.Name
+                                
+                            elseif string.find(instance.TextLabel.Text, "BuddyHatchAlt6") then
+                                OnlyCount1 = "BuddyHatchAlt6"
+                                username = game:GetService("Players").BuddyHatchAlt6.Name
+                                
+                            elseif string.find(instance.TextLabel.Text, "BuddyHatchAlt7") then
+                                OnlyCount1 = "BuddyHatchAlt7"
+                                username = game:GetService("Players").BuddyHatchAlt7.Name
 
                             end
                             
@@ -171,6 +183,39 @@ Chat.ChildAdded:Connect(function(instance)
                                 PetChance = "1/200M"
                                 petname = "Melaken"
                                 PetImage = "https://media.discordapp.net/attachments/749822808288395354/997681534247125053/Melaken.png"
+                            end
+                        
+                        elseif string.find(instance.TextLabel.Text, "100M Trophy") then
+                            if string.find(instance.TextLabel.Text, "Shiny") then
+                                PetChance = "1/100M"
+                                petname = "Shiny 100M Trophy"
+                                PetImage = "https://media.discordapp.net/attachments/749822808288395354/1000100377418530936/100M_Trophy.png"
+                            else
+                                PetChance = "1/1.00M"
+                                petname = "100M Trophy"
+                                PetImage = "https://media.discordapp.net/attachments/749822808288395354/1000100377418530936/100M_Trophy.png"
+                            end
+                        
+                        elseif string.find(instance.TextLabel.Text, "Infinity Wisp") then
+                            if string.find(instance.TextLabel.Text, "Shiny") then
+                                PetChance = "1/1.00B"
+                                petname = "Shiny Infinity Wisp"
+                                PetImage = "https://media.discordapp.net/attachments/749822808288395354/1000100378752331897/Infinity_Wisp.png"
+                            else
+                                PetChance = "1/10.0M"
+                                petname = "Infinity Wisp"
+                                PetImage = "https://media.discordapp.net/attachments/749822808288395354/1000100378752331897/Infinity_Wisp.png"
+                            end
+                        
+                        elseif string.find(instance.TextLabel.Text, "Loyal Guard") then
+                            if string.find(instance.TextLabel.Text, "Shiny") then
+                                PetChance = "1/10.0B"
+                                petname = "Shiny Loyal Guard"
+                                PetImage = "https://media.discordapp.net/attachments/749822808288395354/1000100377741500476/Loyal_Guard.png"
+                            else
+                                PetChance = "1/100M"
+                                petname = "Loyal Guard"
+                                PetImage = "https://media.discordapp.net/attachments/749822808288395354/1000100377741500476/Loyal_Guard.png"
                             end
                         end
                         
