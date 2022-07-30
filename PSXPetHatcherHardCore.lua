@@ -20,7 +20,7 @@ repeat wait() until game:GetService("Players")
                	"SendNotification",
                 {
 			Title = "PSX Pet Hatcher Hardcore",
-			Text = "Version 2.6.6, Updated and Maintained by PetSimulatorXPlayer#5011",
+			Text = "Version 2.7.0, Updated and Maintained by PetSimulatorXPlayer#5011",
 			Duration = 5
 		}
 	)
@@ -248,4 +248,4 @@ repeat wait() until game:GetService("Players")
 	_G.Connection = game:GetService("Players").LocalPlayer.PlayerGui.Inventory.Frame.Main.Pets.ChildAdded:Connect(function(child)
 		SendWebhook(child.Name)
 	end)
-print('PSX Pet Hatcher Hardcore V2.6.6, Maintained and Updated by PetSimulatorXPlayer#5011')
+print('PSX Pet Hatcher Hardcore V2.7.0, Maintained and Updated by PetSimulatorXPlayer#5011')
