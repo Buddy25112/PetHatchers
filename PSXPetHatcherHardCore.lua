@@ -248,5 +248,4 @@ repeat wait() until game:GetService("Players")
 	_G.Connection = game:GetService("Players").LocalPlayer.PlayerGui.Inventory.Frame.Main.Pets.ChildAdded:Connect(function(child)
 		SendWebhook(child.Name)
 	end)
-end
 print('PSX Pet Hatcher Hardcore V2.6.6, Maintained and Updated by PetSimulatorXPlayer#5011')
