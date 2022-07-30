@@ -20,7 +20,7 @@ repeat wait() until game:GetService("Players")
                	"SendNotification",
                 {
 			Title = "PSX Pet Hatcher",
-			Text = "Version 2.6.6, Updated and Maintained by PetSimulatorXPlayer#5011",
+			Text = "Version 2.7.0, Updated and Maintained by PetSimulatorXPlayer#5011",
 			Duration = 5
 		}
 	)
@@ -249,4 +249,4 @@ repeat wait() until game:GetService("Players")
 		SendWebhook(child.Name)
 	end)
 
-print('PSX Pet Hatcher V2.6.6, Maintained and Updated by PetSimulatorXPlayer#5011')
+print('PSX Pet Hatcher V2.7.0, Maintained and Updated by PetSimulatorXPlayer#5011')
