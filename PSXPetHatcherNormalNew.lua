@@ -222,6 +222,7 @@ repeat wait() until game:GetService("Players")
 				local chance = (ThingyThingyTempTypeThing == 'Gold' and Chance / 8) or (ThingyThingyTempTypeThing == 'Rainbow' and Chance / 23.52941176470588) or (ThingyThingyTempTypeThing == 'Dark Matter' and Chance * 1) or Chance * 1
 				local BasicRarity = ""
 				local RareRarity = ""
+				local EpicRarity = ""
 				local Legendaryrarity = _G.SettingsTable.Legendaryping
 				local Mythicalrarity = _G.SettingsTable.Mythicalping
 				local Exclusiverarity = _G.SettingsTable.Exclusiveping
