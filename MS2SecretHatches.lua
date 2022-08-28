@@ -217,6 +217,39 @@ Chat.ChildAdded:Connect(function(instance)
                                 petname = "Virus CORE"
                                 PetImage = "https://media.discordapp.net/attachments/749822808288395354/987505297251782696/Virus_CORE.png"
                             end
+
+                        elseif string.find(instance.TextLabel.Text, "Royal Paladin") then
+                            if string.find(instance.TextLabel.Text, "Shiny") then
+                                PetChance = "1/200M"
+                                petname = "Shiny Royal Paladin"
+                                PetImage = "https://media.discordapp.net/attachments/749822808288395354/1012940786310062171/Royal_Paladin.png"
+                            else
+                                PetChance = "1/2.00M"
+                                petname = "Royal Paladin"
+                                PetImage = "https://media.discordapp.net/attachments/749822808288395354/1012940786310062171/Royal_Paladin.png"
+                            end
+                        
+                        elseif string.find(instance.TextLabel.Text, "Plasma Wolflord") then
+                            if string.find(instance.TextLabel.Text, "Shiny") then
+                                PetChance = "1/1.00B"
+                                petname = "Shiny Plasma Wolflord"
+                                PetImage = "https://media.discordapp.net/attachments/749822808288395354/1012809956304617492/Plasma_Wolflord.png"
+                            else
+                                PetChance = "1/10.0M"
+                                petname = "Plasma Wolflord"
+                                PetImage = "https://media.discordapp.net/attachments/749822808288395354/1012809956304617492/Plasma_Wolflord.png"
+                            end
+                        
+                        elseif string.find(instance.TextLabel.Text, "Pyramidium") then
+                            if string.find(instance.TextLabel.Text, "Shiny") then
+                                PetChance = "1/13.3B"
+                                petname = "Shiny Pyramidium"
+                                PetImage = "https://media.discordapp.net/attachments/749822808288395354/1012809955851645019/Pyramidium.png"
+                            else
+                                PetChance = "1/133M"
+                                petname = "Pyramidium"
+                                PetImage = "https://media.discordapp.net/attachments/749822808288395354/1012809955851645019/Pyramidium.png"
+                            end
                         end
                         
                         -- Other Features
