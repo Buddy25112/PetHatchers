@@ -309,6 +309,39 @@ Chat.ChildAdded:Connect(function(instance)
                                     petname = "OwOlord"
                                     PetImage = "https://media.discordapp.net/attachments/749822808288395354/1018322959892492298/OwOlord.png"
                                 end
+
+                            elseif string.find(instance.TextLabel.Text, "Gumdrop King") then
+                                if string.find(instance.TextLabel.Text, "Shiny") then
+                                    PetChance = "1/400M"
+                                    petname = "Shiny Gumdrop King"
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1020824668539723796/Gumdrop_King.png"
+                                else
+                                    PetChance = "1/4.00M"
+                                    petname = "Gumdrop King"
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1020824668539723796/Gumdrop_King.png"
+                                end
+
+                            elseif string.find(instance.TextLabel.Text, "Gummy Dogcat") then
+                                if string.find(instance.TextLabel.Text, "Shiny") then
+                                    PetChance = "1/100M"
+                                    petname = "Shiny Gummy Dogcat"
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1020824659236749382/Gummy_Dogcat.png"
+                                else
+                                    PetChance = "1/1.00M"
+                                    petname = "Gummy Dogcat"
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1020824659236749382/Gummy_Dogcat.png"
+                                end
+
+                            elseif string.find(instance.TextLabel.Text, "Giant Chocolate Chicken") then
+                                if string.find(instance.TextLabel.Text, "Shiny") then
+                                    PetChance = "1/5.00B"
+                                    petname = "Shiny Giant Chocolate Chicken"
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1020824634049970257/Giant_Chocolate_Chicken.png"
+                                else
+                                    PetChance = "1/50.0M"
+                                    petname = "Giant Chocolate Chicken"
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1020824634049970257/Giant_Chocolate_Chicken.png"
+                                end
                             end
                             
                             -- Other Features
