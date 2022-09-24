@@ -101,59 +101,48 @@ Chat.ChildAdded:Connect(function(instance)
                             local PetChance
                             local PetImage
                             local petname
-                            if string.find(instance.TextLabel.Text, "Cyan Sea Dragon") then
+                            if string.find(instance.TextLabel.Text, "Colossal Tart") then
                                 if string.find(instance.TextLabel.Text, "Shiny") then
-                                    PetChance = "1/2.00B"
-                                    petname = "Shiny Cyan Sea Dragon"
-                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1005341464403902544/Cyan_Sea_Dragon.png"
+                                    PetChance = "1/100M"
+                                    petname = "Shiny Colossal Tart"
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1023005423164473344/Colossal_Tart.png"
                                 else
-                                    PetChance = "1/20.0M"
-                                    petname = "Cyan Sea Dragon"
-                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1005341464403902544/Cyan_Sea_Dragon.png"
+                                    PetChance = "1/1.00M"
+                                    petname = "Colossal Tart"
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1023005423164473344/Colossal_Tart.png"
                                 end
                             
-                            elseif string.find(instance.TextLabel.Text, "Lunar Sea Dragon") then
+                            elseif string.find(instance.TextLabel.Text, "Pastry Shard") then
                                 if string.find(instance.TextLabel.Text, "Shiny") then
-                                    PetChance = "1/2.00B"
-                                    petname = "Shiny Lunar Sea Dragon"
-                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1005341458242473984/Lunar_Sea_Dragon.png"
+                                    PetChance = "1/400M"
+                                    petname = "Shiny Pastry Shard"
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1023007930099957790/Pastry_Shard.png"
                                 else
-                                    PetChance = "1/20.0M"
-                                    petname = "Lunar Sea Dragon"
-                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1005341458242473984/Lunar_Sea_Dragon.png"
+                                    PetChance = "1/4.00M"
+                                    petname = "Pastry Shard"
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1023007930099957790/Pastry_Shard.png"
                                 end
                             
-                            elseif string.find(instance.TextLabel.Text, "Magenta Sea Dragon") then
+                            elseif string.find(instance.TextLabel.Text, "Angelic Gummy Bear") then
                                 if string.find(instance.TextLabel.Text, "Shiny") then
-                                    PetChance = "1/2.00B"
-                                    petname = "Shiny Magenta Sea Dragon"
-                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1005341457739165707/Magenta_Sea_Dragon.png"
+                                    PetChance = "1/10.0B"
+                                    petname = "Shiny Angelic Gummy Bear"
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1023005422283661422/Angelic_Gummy_Bear.png"
                                 else
-                                    PetChance = "1/20.0M"
-                                    petname = "Magenta Sea Dragon"
-                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1005341457739165707/Magenta_Sea_Dragon.png"
+                                    PetChance = "1/100M"
+                                    petname = "Angelic Gummy Bear"
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1023005422283661422/Angelic_Gummy_Bear.png"
                                 end
                             
-                            elseif string.find(instance.TextLabel.Text, "Sand Sea Dragon") then
+                            elseif string.find(instance.TextLabel.Text, "Evil Gummy Bear") then
                                 if string.find(instance.TextLabel.Text, "Shiny") then
-                                    PetChance = "1/2.00B"
-                                    petname = "Shiny Sand Sea Dragon"
-                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1005341481374076968/Sand_Sea_Dragon.png"
+                                    PetChance = "1/10.0B"
+                                    petname = "Shiny Evil Gummy Bear"
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1023005422778593301/Evil_Gummy_Bear.png"
                                 else
-                                    PetChance = "1/20.0M"
-                                    petname = "Sand Sea Dragon"
-                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1005341481374076968/Sand_Sea_Dragon.png"
-                                end
-                            
-                            elseif string.find(instance.TextLabel.Text, "King Pufferfish") then
-                                if string.find(instance.TextLabel.Text, "Shiny") then
-                                    PetChance = "1/8.00B"
-                                    petname = "Shiny King Pufferfish"
-                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1005341456808022056/King_Pufferfish.png"
-                                else
-                                    PetChance = "1/80.0M"
-                                    petname = "King Pufferfish"
-                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1005341456808022056/King_Pufferfish.png"
+                                    PetChance = "1/100M"
+                                    petname = "Evil Gummy Bear"
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1023005422778593301/Evil_Gummy_Bear.png"
                                 end
                             
                             elseif string.find(instance.TextLabel.Text, "Royal Doggy") then
