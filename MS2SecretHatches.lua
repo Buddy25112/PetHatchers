@@ -109,7 +109,7 @@ Chat.ChildAdded:Connect(function(instance)
                             end
                         end
  
-                        if OnlyCount1 == "buddy25112" or OnlyCount1 == "buddy25113" or OnlyCount1 == "BuddyHatchAlt4" or OnlyCount1 == "BuddyHatchAlt5" or OnlyCount1 == "BuddyHatchAlt6" or OnlyCount1 == "BuddyHatchAlt7" or OnlyCount1 == "BuddyHatchAlt1" or OnlyCount1 == "AJ_GamingYYTT" then
+                        if OnlyCount1 == "buddy25112" or OnlyCount1 == "buddy25113" or OnlyCount1 == "BuddyHatchAlt4" or OnlyCount1 == "BuddyHatchAlt5" or OnlyCount1 == "BuddyHatchAlt6" or OnlyCount1 == "BuddyHatchAlt7" or OnlyCount1 == "BuddyHatchAlt1" or OnlyCount1 == "AJ_GamingYYTT" or OnlyCount1 == "BuddyHatchAlt8" or OnlyCount1 == "BuddyHatchAlt9" or OnlyCount1 == "BuddyHatchAlt10" or OnlyCount1 == "BuddyHatchAlt11" then
                             LoadHatchAmountSettings()
 
                             -- Get Pet Info
