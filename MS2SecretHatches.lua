@@ -80,6 +80,21 @@ Chat.ChildAdded:Connect(function(instance)
                                 OnlyCount1 = "BuddyHatchAlt7"
                                 username = game:GetService("Players").BuddyHatchAlt7.Name
 
+                            elseif string.find(instance.TextLabel.Text, "BuddyHatchAlt8") then
+                                OnlyCount1 = "BuddyHatchAlt8"
+                                username = game:GetService("Players").BuddyHatchAlt8.Name
+                                
+                            elseif string.find(instance.TextLabel.Text, "BuddyHatchAlt9") then
+                                OnlyCount1 = "BuddyHatchAlt9"
+                                username = game:GetService("Players").BuddyHatchAlt9.Name
+                                
+                            elseif string.find(instance.TextLabel.Text, "BuddyHatchAlt10") then
+                                OnlyCount1 = "BuddyHatchAlt10"
+                                username = game:GetService("Players").BuddyHatchAlt10.Name
+                                
+                            elseif string.find(instance.TextLabel.Text, "BuddyHatchAlt11") then
+                                OnlyCount1 = "BuddyHatchAlt11"
+                                username = game:GetService("Players").BuddyHatchAlt11.Name
                             end
                             
                         local OnlyCount = {OnlyCount1}
