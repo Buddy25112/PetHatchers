@@ -69,9 +69,9 @@ Chat.ChildAdded:Connect(function(instance)
                         -- Get Hatcher Info
                         local OnlyCount1
                         local username
-                        if string.find(instance.TextLabel.Text, "BuddyStorageAcc1") then
-                                OnlyCount1 = "BuddyStorageAcc1"
-                                username = game:GetService("Players").BuddyStorageAcc1.Name
+                        if string.find(instance.TextLabel.Text, "buddy25112") then
+                                OnlyCount1 = "buddy25112"
+                                username = game:GetService("Players").buddy25112.Name
                                 
                             elseif string.find(instance.TextLabel.Text, "buddy25113") then
                                 OnlyCount1 = "buddy25113"
@@ -82,8 +82,13 @@ Chat.ChildAdded:Connect(function(instance)
                                 username = game:GetService("Players").BuddyHatchAlt4.Name
                                 
                             elseif string.find(instance.TextLabel.Text, "BuddyHatchAlt1") then
-                                OnlyCount1 = "BuddyHatchAlt1"
-                                username = game:GetService("Players").BuddyHatchAlt1.Name
+                                if string.find(instance.TextLabel.Text, "BuddyHatchAlt11") then
+                                    OnlyCount1 = "BuddyHatchAlt11"
+                                    username = game:GetService("Players").BuddyHatchAlt11.Name
+                                else
+                                    OnlyCount1 = "BuddyHatchAlt1"
+                                    username = game:GetService("Players").BuddyHatchAlt1.Name
+                                end
                                 
                             elseif string.find(instance.TextLabel.Text, "AJ_GamingYYTT") then
                                 OnlyCount1 = "AJ_GamingYYTT"
@@ -112,10 +117,6 @@ Chat.ChildAdded:Connect(function(instance)
                             elseif string.find(instance.TextLabel.Text, "BuddyHatchAlt10") then
                                 OnlyCount1 = "BuddyHatchAlt10"
                                 username = game:GetService("Players").BuddyHatchAlt10.Name
-                                
-                            elseif string.find(instance.TextLabel.Text, "BuddyHatchAlt11") then
-                                OnlyCount1 = "BuddyHatchAlt11"
-                                username = game:GetService("Players").BuddyHatchAlt11.Name
                             end
                             
                         local OnlyCount = {OnlyCount1}
@@ -130,7 +131,7 @@ Chat.ChildAdded:Connect(function(instance)
                             end
                         end
  
-                        if OnlyCount1 == "BuddyStorageAcc1" or OnlyCount1 == "buddy25113" or OnlyCount1 == "BuddyHatchAlt4" or OnlyCount1 == "BuddyHatchAlt5" or OnlyCount1 == "BuddyHatchAlt6" or OnlyCount1 == "BuddyHatchAlt7" or OnlyCount1 == "BuddyHatchAlt1" or OnlyCount1 == "AJ_GamingYYTT" or OnlyCount1 == "BuddyHatchAlt8" or OnlyCount1 == "BuddyHatchAlt9" or OnlyCount1 == "BuddyHatchAlt10" or OnlyCount1 == "BuddyHatchAlt11" then
+                        if OnlyCount1 == "buddy25112" or OnlyCount1 == "buddy25113" or OnlyCount1 == "BuddyHatchAlt4" or OnlyCount1 == "BuddyHatchAlt5" or OnlyCount1 == "BuddyHatchAlt6" or OnlyCount1 == "BuddyHatchAlt7" or OnlyCount1 == "BuddyHatchAlt1" or OnlyCount1 == "AJ_GamingYYTT" or OnlyCount1 == "BuddyHatchAlt8" or OnlyCount1 == "BuddyHatchAlt9" or OnlyCount1 == "BuddyHatchAlt10" or OnlyCount1 == "BuddyHatchAlt11" then
                             LoadHatchAmountSettings()
 
                             -- Get Pet Info
