@@ -67,71 +67,58 @@ Chat.ChildAdded:Connect(function(instance)
                     if string.find(instance.TextLabel.Text,"a") then
                         
                         -- Get Hatcher Info
-                        local OnlyCount1
                         local username
+                        local count
                         if string.find(instance.TextLabel.Text, "buddy25112") then
-                                OnlyCount1 = "buddy25112"
+                                count = game:GetService("Players").buddy25112.leaderstats.Eggs.Value
                                 username = game:GetService("Players").buddy25112.Name
                                 
                             elseif string.find(instance.TextLabel.Text, "buddy25113") then
-                                OnlyCount1 = "buddy25113"
+                                count = game:GetService("Players").buddy25113.leaderstats.Eggs.Value
                                 username = game:GetService("Players").buddy25113.Name
                                 
                             elseif string.find(instance.TextLabel.Text, "BuddyHatchAlt4") then
-                                OnlyCount1 = "BuddyHatchAlt4"
+                                count = game:GetService("Players").BuddyHatchAlt4.leaderstats.Eggs.Value
                                 username = game:GetService("Players").BuddyHatchAlt4.Name
                                 
                             elseif string.find(instance.TextLabel.Text, "BuddyHatchAlt1") then
                                 if string.find(instance.TextLabel.Text, "BuddyHatchAlt11") then
-                                    OnlyCount1 = "BuddyHatchAlt11"
+                                    count = game:GetService("Players").BuddyHatchAlt11.leaderstats.Eggs.Value
                                     username = game:GetService("Players").BuddyHatchAlt11.Name
+                                elseif string.find(instance.TextLabel.Text, "BuddyHatchAlt10") then
+                                    count = game:GetService("Players").BuddyHatchAlt10.leaderstats.Eggs.Value
+                                    username = game:GetService("Players").BuddyHatchAlt10.Name
                                 else
-                                    OnlyCount1 = "BuddyHatchAlt1"
+                                    count = game:GetService("Players").BuddyHatchAlt1.leaderstats.Eggs.Value
                                     username = game:GetService("Players").BuddyHatchAlt1.Name
                                 end
                                 
                             elseif string.find(instance.TextLabel.Text, "AJ_GamingYYTT") then
-                                OnlyCount1 = "AJ_GamingYYTT"
+                                count = game:GetService("Players").AJ_GamingYYTT.leaderstats.Eggs.Value
                                 username = game:GetService("Players").AJ_GamingYYTT.Name
                                 
                             elseif string.find(instance.TextLabel.Text, "BuddyHatchAlt5") then
-                                OnlyCount1 = "BuddyHatchAlt5"
+                                count = game:GetService("Players").BuddyHatchAlt5.leaderstats.Eggs.Value
                                 username = game:GetService("Players").BuddyHatchAlt5.Name
                                 
                             elseif string.find(instance.TextLabel.Text, "BuddyHatchAlt6") then
-                                OnlyCount1 = "BuddyHatchAlt6"
+                                count = game:GetService("Players").BuddyHatchAlt6.leaderstats.Eggs.Value
                                 username = game:GetService("Players").BuddyHatchAlt6.Name
                                 
                             elseif string.find(instance.TextLabel.Text, "BuddyHatchAlt7") then
-                                OnlyCount1 = "BuddyHatchAlt7"
+                                count = game:GetService("Players").BuddyHatchAlt7.leaderstats.Eggs.Value
                                 username = game:GetService("Players").BuddyHatchAlt7.Name
 
                             elseif string.find(instance.TextLabel.Text, "BuddyHatchAlt8") then
-                                OnlyCount1 = "BuddyHatchAlt8"
+                                count = game:GetService("Players").BuddyHatchAlt8.leaderstats.Eggs.Value
                                 username = game:GetService("Players").BuddyHatchAlt8.Name
                                 
                             elseif string.find(instance.TextLabel.Text, "BuddyHatchAlt9") then
-                                OnlyCount1 = "BuddyHatchAlt9"
+                                count = game:GetService("Players").BuddyHatchAlt9.leaderstats.Eggs.Value
                                 username = game:GetService("Players").BuddyHatchAlt9.Name
-                                
-                            elseif string.find(instance.TextLabel.Text, "BuddyHatchAlt10") then
-                                OnlyCount1 = "BuddyHatchAlt10"
-                                username = game:GetService("Players").BuddyHatchAlt10.Name
                             end
-                            
-                        local OnlyCount = {OnlyCount1}
                         
-                        -- Get Counts
-                        local count = 0
-                        for i,v in pairs(game:GetService("Players"):GetChildren()) do
-                            for n,b in pairs(OnlyCount) do
-                                if string.find(v.Name, b) then
-                        	        count = v.leaderstats["Eggs"].Value    
-                                end
-                            end
-                        end
- 
-                        if OnlyCount1 == "buddy25112" or OnlyCount1 == "buddy25113" or OnlyCount1 == "BuddyHatchAlt4" or OnlyCount1 == "BuddyHatchAlt5" or OnlyCount1 == "BuddyHatchAlt6" or OnlyCount1 == "BuddyHatchAlt7" or OnlyCount1 == "BuddyHatchAlt1" or OnlyCount1 == "AJ_GamingYYTT" or OnlyCount1 == "BuddyHatchAlt8" or OnlyCount1 == "BuddyHatchAlt9" or OnlyCount1 == "BuddyHatchAlt10" or OnlyCount1 == "BuddyHatchAlt11" then
+                        if username == "buddy25112" or username == "buddy25113" or username == "BuddyHatchAlt4" or username == "BuddyHatchAlt5" or username == "BuddyHatchAlt6" or username == "BuddyHatchAlt7" or username == "BuddyHatchAlt1" or username == "AJ_GamingYYTT" or username == "BuddyHatchAlt8" or username == "BuddyHatchAlt9" or username == "BuddyHatchAlt10" or username == "BuddyHatchAlt11" then
                             LoadHatchAmountSettings()
 
                             -- Get Pet Info
