@@ -1,6 +1,6 @@
 --[[
 
-// PSX Pet Hatcher V2 \\
+// PSX Pet Hatcher V3 \\
 
 Credits:
 [PetSimXPlayer]: Owner, developer
