@@ -246,4 +246,4 @@ repeat wait() until game:GetService("Players")
 		SendWebhook(child.Name)
 	end)
 
-print('PSX Pet Hatcher V3.0.1, Maintained and Updated by PetSimulatorXPlayer#5011')
+print('PSX Pet Hatcher V3.0.2, Maintained and Updated by PetSimulatorXPlayer#5011')
