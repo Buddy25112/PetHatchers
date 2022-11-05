@@ -16,6 +16,7 @@ _G.SettingsTable = {
     BuyEgg = false;
     SkipAnimation = false;
     MultiHatch = false;
+    OctupleHatch = false;
     AutoRankRewards = false;
     AutoCollectLootBags = false;
     AutoCollectOrbs = false;
@@ -106,7 +107,8 @@ function HatchEgg()
             local args = {
                 [1] = {
                     [1] = _G.SettingsTable.EggType,
-                    [2] = _G.SettingsTable.MultiHatch
+                    [2] = _G.SettingsTable.MultiHatch,
+                    [3] = _G.SettingsTable.OctupleHatch
                 }
             }
             workspace.__THINGS.__REMOTES:FindFirstChild("buy egg"):InvokeServer(unpack(args))
@@ -359,6 +361,9 @@ AutoHatchEggSection:NewTextBox("Choose Egg: ", "Choose what egg you want to hatc
 end)
 AutoHatchEggSection:NewToggle("Multi Hatch", "Multi Hatches Eggs", function(bool)
     _G.SettingsTable.MultiHatch = bool
+end)
+AutoHatchEggSection:NewToggle("Octuple Hatch", "Octuple Hatches Eggs", function(bool)
+    _G.SettingsTable.OctupleHatch = bool
 end)
 AutoHatchEggSection:NewToggle("Start Hatching Egg", "Starts Hatching The Egg", function(bool)
     _G.SettingsTable.BuyEgg = bool
