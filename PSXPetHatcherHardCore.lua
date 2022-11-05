@@ -16,6 +16,7 @@ _G.SettingsTable = {
     BuyEgg = false;
     SkipAnimation = false;
     MultiHatch = false;
+    OctupleHatch = false;
     AutoRankRewards = false;
     AutoCollectLootBags = false;
     AutoCollectOrbs = false;
@@ -107,6 +108,7 @@ function HatchEgg()
                 [1] = {
                     [1] = _G.SettingsTable.EggType,
                     [2] = _G.SettingsTable.MultiHatch
+                    [3] = _G.SettingsTable.OctupleHatch
                 }
             }
             workspace.__THINGS.__REMOTES:FindFirstChild("buy egg"):InvokeServer(unpack(args))
@@ -225,7 +227,7 @@ end
 
 -- Library
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Hatchers Hub | Pet Simulator X Hardcore | Version 3.0.1", "Midnight")
+local Window = Library.CreateLib("Hatchers Hub | Pet Simulator X Hardcore | Version 3.0.2", "Midnight")
 
 -- CreditsUI
 local CreditsTab = Window:NewTab("Credits")
@@ -235,7 +237,7 @@ local CreditsSection2 = CreditsTab:NewSection("Bot Owner: aqucuisghsicuk#6971")
 local CreditsSection3 = CreditsTab:NewSection("Helper: Cor#0002")
 local CreditsSection4 = CreditsTab:NewSection("Helper: wYn#0001 (Youtube Guides)")
 local CreditsSection5 = CreditsTab:NewSection("-------------------------------------------------------------------")
-local CreditsSection6 = CreditsTab:NewSection("Last Updated: 2022-10-26")
+local CreditsSection6 = CreditsTab:NewSection("Last Updated: 2022-11-05")
 local CreditsSection7 = CreditsTab:NewSection("Last Update: New GUI Color + Many New Features!")
 local CreditsSection8 = CreditsTab:NewSection("Upcoming Update: More New Features")
 local CreditsSection9 = CreditsTab:NewSection("Discord Link: https://discord.gg/83aFw8rGM8")
@@ -359,6 +361,9 @@ AutoHatchEggSection:NewTextBox("Choose Egg: ", "Choose what egg you want to hatc
 end)
 AutoHatchEggSection:NewToggle("Multi Hatch", "Multi Hatches Eggs", function(bool)
     _G.SettingsTable.MultiHatch = bool
+end)
+AutoHatchEggSection:NewToggle("Octuple Hatch", "Octuple Hatches Eggs", function(bool)
+    _G.SettingsTable.OctupleHatch = bool
 end)
 AutoHatchEggSection:NewToggle("Start Hatching Egg", "Starts Hatching The Egg", function(bool)
     _G.SettingsTable.BuyEgg = bool
