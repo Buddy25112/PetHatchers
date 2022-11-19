@@ -45,6 +45,9 @@ _G.HatchAmount = {
     doggyplushie = 0;
     unicornplushie = 0;
     giantplushbot = 0;
+    pixeldogcat = 0;
+    spectrum = 0;
+    pixeltrophy = 0;
 }
 
 --Load Settings
@@ -606,6 +609,58 @@ Chat.ChildAdded:Connect(function(instance)
                                     PetImage = "https://media.discordapp.net/attachments/749822808288395354/1040796642670026802/Giant_Plushbot.png"
                                     hatchamountcounter = _G.HatchAmount.giantplushbot + 1
                                     _G.HatchAmount.giantplushbot = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                end
+                            
+                            
+                            elseif string.find(instance.TextLabel.Text, "Pixel Dogcat") then
+                                if string.find(instance.TextLabel.Text, "Shiny") then
+                                    PetChance = "1/100M"
+                                    petname = "Shiny Pixel Dogcat"
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1043321191454220298/Pixel_Dogcat.png"
+                                    hatchamountcounter = _G.HatchAmount.pixeldogcat + 1
+                                    _G.HatchAmount.pixeldogcat = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                else
+                                    PetChance = "1/1.00M"
+                                    petname = "Pixel Dogcat"
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1043321191454220298/Pixel_Dogcat.png"
+                                    hatchamountcounter = _G.HatchAmount.pixeldogcat + 1
+                                    _G.HatchAmount.pixeldogcat = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                end
+
+                            elseif string.find(instance.TextLabel.Text, "Spectrum") then
+                                if string.find(instance.TextLabel.Text, "Shiny") then
+                                    PetChance = "1/666M"
+                                    petname = "Shiny Spectrum"
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1043321192582500352/Spectrum.png"
+                                    hatchamountcounter = _G.HatchAmount.spectrum + 1
+                                    _G.HatchAmount.spectrum = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                else
+                                    PetChance = "1/6.66M"
+                                    petname = "Spectrum"
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1043321192582500352/Spectrum.png"
+                                    hatchamountcounter = _G.HatchAmount.spectrum + 1
+                                    _G.HatchAmount.spectrum = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                end
+
+                            elseif string.find(instance.TextLabel.Text, "Pixel Trophy") then
+                                if string.find(instance.TextLabel.Text, "Shiny") then
+                                    PetChance = "1/8.00B"
+                                    petname = "Shiny Pixel Trophy"
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1043321191831720007/Pixel_Trophy.png"
+                                    hatchamountcounter = _G.HatchAmount.pixeltrophy + 1
+                                    _G.HatchAmount.pixeltrophy = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                else
+                                    PetChance = "1/80.0M"
+                                    petname = "Pixel Trophy"
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1043321191831720007/Pixel_Trophy.png"
+                                    hatchamountcounter = _G.HatchAmount.pixeltrophy + 1
+                                    _G.HatchAmount.pixeltrophy = hatchamountcounter
                                     SaveHatchAmountSettings()
                                 end
                             end
