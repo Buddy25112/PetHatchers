@@ -687,6 +687,7 @@ Chat.ChildAdded:Connect(function(instance)
                                     hatchamountcounter = _G.HatchAmount.velvetwolflord + 1
                                     _G.HatchAmount.velvetwolflord = hatchamountcounter
                                     SaveHatchAmountSettings()
+                                end
                                 
                             elseif string.find(instance.TextLabel.Text, "Santa's Giftbag") then
                                 if string.find(instance.TextLabel.Text, "Shiny") then
