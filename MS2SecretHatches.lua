@@ -670,6 +670,7 @@ Chat.ChildAdded:Connect(function(instance)
                                     hatchamountcounter = _G.HatchAmount.pixeltrophy + 1
                                     _G.HatchAmount.pixeltrophy = hatchamountcounter
                                     SaveHatchAmountSettings()
+                                end
                                     
                             elseif string.find(instance.TextLabel.Text, "Velvet Wolflord") then
                                 if string.find(instance.TextLabel.Text, "Shiny") then
