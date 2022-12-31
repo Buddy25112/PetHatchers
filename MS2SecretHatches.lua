@@ -69,8 +69,6 @@ _G.HatchAmount = {
     NewYearGem = 0;
     NewYearChampion = 0;
 }
-
-"OdeToJoy":3, "SantaHat":1, "PeppermintShock":0, "DogFestival":0, "SilentNight":0, "KingBell":0
 --Load Settings
 local TrackListName = "AJ's_Hatch_Amount_Count.txt"
 
