@@ -857,7 +857,7 @@ Chat.ChildAdded:Connect(function(instance)
                                 if string.find(instance.TextLabel.Text, "Shiny") then
                                     PetChance = "1/250M"
                                     petname = "Shiny Flaming Firecracker"
-                                    PetImage = "https://media.discordapp.net/attachments/982594802258436156/1058637310410895500/Flaming_Firework.png"
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1058495400820084806/Shiny_Flaming_Firework.png"
                                     hatchamountcounter = _G.HatchAmount.FlamingFirecracker + 1
                                     _G.HatchAmount.FlamingFirecracker = hatchamountcounter
                                     SaveHatchAmountSettings()
@@ -874,7 +874,7 @@ Chat.ChildAdded:Connect(function(instance)
                                 if string.find(instance.TextLabel.Text, "Shiny") then
                                     PetChance = "1/2.00B"
                                     petname = "Shiny New Year Gem"
-                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1058495400400662598/New_Year_Gem.png"
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1058495399968653492/Shiny_New_Year_Gem.png"
                                     hatchamountcounter = _G.HatchAmount.NewYearGem + 1
                                     _G.HatchAmount.NewYearGem = hatchamountcounter
                                     SaveHatchAmountSettings()
@@ -891,7 +891,7 @@ Chat.ChildAdded:Connect(function(instance)
                                 if string.find(instance.TextLabel.Text, "Shiny") then
                                     PetChance = "1/16.6B"
                                     petname = "Shiny New Year Champion"
-                                    PetImage = "https://media.discordapp.net/attachments/982594802258436156/1058637310729666650/New_Year_Champion.png"
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1058495399318532106/Shiny_New_Year_Champion.png"
                                     hatchamountcounter = _G.HatchAmount.NewYearChampion + 1
                                     _G.HatchAmount.NewYearChampion = hatchamountcounter
                                     SaveHatchAmountSettings()
