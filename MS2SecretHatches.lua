@@ -70,6 +70,9 @@ _G.HatchAmount = {
     PrismaticGuardian = 0;
     PastelBunny = 0;
     KingMush = 0;
+    Aquatica = 0;
+    VerdantWyvern = 0;
+    Blastferno = 0;
 }
 
 --Load Settings
@@ -580,6 +583,57 @@ Chat.ChildAdded:Connect(function(instance)
                                     PetImage = "https://media.discordapp.net/attachments/749822808288395354/1063236803563376742/King_Mush.png"
                                     hatchamountcounter = _G.HatchAmount.KingMush + 1
                                     _G.HatchAmount.KingMush = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                end
+                            
+                            elseif string.find(instance.TextLabel.Text, "Aquatica") then
+                                if string.find(instance.TextLabel.Text, "Shiny") then
+                                    PetChance = "1/200M"
+                                    petname = "Shiny Aquatica"
+                                    PetImage = "https://media.discordapp.net/attachments/750156768834879488/1066260787976478760/Screenshot_20230121_124638.png"
+                                    hatchamountcounter = _G.HatchAmount.Aquatica + 1
+                                    _G.HatchAmount.Aquatica = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                else
+                                    PetChance = "1/2.00M"
+                                    petname = "Aquatica"
+                                    PetImage = "https://media.discordapp.net/attachments/750156768834879488/1066255182775726150/Screenshot_20230121_124533-removebg-preview.png"
+                                    hatchamountcounter = _G.HatchAmount.Aquatica + 1
+                                    _G.HatchAmount.Aquatica = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                end
+                            
+                            elseif string.find(instance.TextLabel.Text, "Verdant Wyvern") then
+                                if string.find(instance.TextLabel.Text, "Shiny") then
+                                    PetChance = "1/400M"
+                                    petname = "Shiny Verdant Wyvern"
+                                    PetImage = "https://media.discordapp.net/attachments/750156768834879488/1066268795829751858/Screenshot_20230121_124820.png"
+                                    hatchamountcounter = _G.HatchAmount.VerdantWyvern + 1
+                                    _G.HatchAmount.VerdantWyvern = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                else
+                                    PetChance = "1/4.00M"
+                                    petname = "Verdant Wyvern"
+                                    PetImage = "https://media.discordapp.net/attachments/750156768834879488/1066264981936537610/Screenshot_20230121_124737.png"
+                                    hatchamountcounter = _G.HatchAmount.VerdantWyvern + 1
+                                    _G.HatchAmount.VerdantWyvern = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                end
+
+                            elseif string.find(instance.TextLabel.Text, "Blastferno") then
+                                if string.find(instance.TextLabel.Text, "Shiny") then
+                                    PetChance = "1/20.0B"
+                                    petname = "Shiny Blastferno"
+                                    PetImage = "https://media.discordapp.net/attachments/750156768834879488/1066280567466905660/Screenshot_20230121_125002.png"
+                                    hatchamountcounter = _G.HatchAmount.Blastferno + 1
+                                    _G.HatchAmount.Blastferno = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                else
+                                    PetChance = "1/200M"
+                                    petname = "Blastferno"
+                                    PetImage = "https://media.discordapp.net/attachments/750156768834879488/1066275566833115136/Screenshot_20230121_124914.png"
+                                    hatchamountcounter = _G.HatchAmount.Blastferno + 1
+                                    _G.HatchAmount.Blastferno = hatchamountcounter
                                     SaveHatchAmountSettings()
                                 end
                             end
