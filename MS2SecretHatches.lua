@@ -178,13 +178,6 @@ Chat.ChildAdded:Connect(function(instance)
                         
                         if username == "buddy25112" or username == "buddy25113" or username == "BuddyHatchAlt4" or username == "BuddyHatchAlt5" or username == "BuddyHatchAlt6" or username == "BuddyHatchAlt7" or username == "BuddyHatchAlt1" or username == "AJ_GamingYYTT" or username == "BuddyHatchAlt8" or username == "BuddyHatchAlt9" or username == "BuddyHatchAlt10" or username == "BuddyHatchAlt11" then
                             LoadHatchAmountSettings()
-                            if _G.HatchAmount.ValentinesSoul == nil then 
-                                _G.HatchAmount.ValentinesSoul = 2
-                            elseif _G.HatchAmount.LoveLetter == nil then
-                                _G.HatchAmount.LoveLetter = 2
-                            elseif _G.HatchAmount.SoulKeeper == nil then
-                                _G.HatchAmount.SoulKeeper = 0
-                            end
 
                             -- Get Pet Info
                             local PetChance
