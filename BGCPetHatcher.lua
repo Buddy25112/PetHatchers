@@ -18,9 +18,24 @@ function abb(Value)
     return Formatted
 end
 
--- Functions
+-- Get Images
+function GetThumbnail(petnumber)
+    local eeee = require(game:GetService("ReplicatedStorage")["Game Objects"].Pets[petnumber]["Pet Module"])
+    local eeee1 = eeee.thumbnail
+    local eeee2 = eeee1:gsub("rbxassetid%:%/%/", "")
+    local httpService = game:GetService("HttpService")
+    local eeee3 = httpService:JSONDecode(game:HttpGet(("https://thumbnails.roblox.com/v1/assets?assetIds="..eeee2.."&size=250x250&format=Png&isCircular=false"))).data[1].imageUrl
+    return eeee3
+end 
+
+-- GSubs
 function FormatMessage(FM)
     local CC = FM:gsub("hatched a", "just hatched a"):gsub("WOW! ", ""):gsub("OMG! ", ""):gsub("%(", "(**"):gsub("%)", "**)")
+    return CC
+end
+
+function Legendary(L)
+    local CC = L:gsub("Legendary", "**Legendary"):gsub(" pet!", "**!")
     return CC
 end
 
@@ -62,13 +77,15 @@ Chat.ChildAdded:Connect(function(instance)
     if string.find(instance.TextLabel.Text,"hatched") then
         if string.find(instance.TextLabel.Text,"a") then
             ChatMessage = (FormatMessage(instance.TextLabel.Text))
+
+            -- Formatting With GSubs
             if string.find(instance.TextLabel.Text,"Legendary") then
                 if string.find(instance.TextLabel.Text,"SHINY") then
                     FinalMessage = ShinyLegendary(ChatMessage)
                     EmbedColor = "9d00ff"
                     SecretPing = ""
                 else
-                    FinalMessage = ChatMessage
+                    FinalMessage = Legendary(ChatMessage)
                     EmbedColor = "00eeff"
                     SecretPing = ""
                 end
@@ -94,6 +111,21 @@ Chat.ChildAdded:Connect(function(instance)
                 end
             end
 
+            -- Get IDs for Images
+            local Image
+            if string.find(instance.TextLabel.Text,"Bucket O' Charms") then
+                Image = GetThumbnail(210)
+            elseif string.find(instance.TextLabel.Text,"Huge Irish Pegasus") then
+                Image = GetThumbnail(208)
+            elseif string.find(instance.TextLabel.Text,"Pot O' Gold") then
+                Image = GetThumbnail(209)
+            elseif string.find(instance.TextLabel.Text,"Supreme Clover") then
+                Image = GetThumbnail(211)
+            else
+                Image = ""
+            end
+
+
             -- Other Features
             local OSTime = os.time()
             local Webhook = _G.Webhooksss
@@ -112,7 +144,7 @@ Chat.ChildAdded:Connect(function(instance)
                             ["icon_url"] = "https://tr.rbxcdn.com/607344341a6f3034b930771626659ce3/150/150/AvatarHeadshot/Png",
                     },
                     ["thumbnail"] = {
-                        ["url"] = ""
+                        ["url"] = Image
                     },
                     ["footer"] = {
                         ["text"] = "Egg #" .. abb(count) .. " | Bubble Gum Clicker",
