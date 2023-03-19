@@ -1,5 +1,6 @@
 -- Feel free to edit this on ur own! this is a basic hatcher with no images. Can work as a server hatcher!
 -- btw put this --> _G.Webhooksss = "" before the loadstring for it to work (ur webhook URL)
+-- BIG Thanks to Tense_Master (Cor#0002) for helping me with the pet images!
 
 -- Getting some info needed for webhook
 local username = game:GetService("Players").LocalPlayer.Name
@@ -34,33 +35,8 @@ function FormatMessage(FM)
     return CC
 end
 
-function Legendary(L)
-    local CC = L:gsub("Legendary", "**Legendary"):gsub(" pet!", "**!")
-    return CC
-end
-
-function ShinyLegendary(SL)
-    local CC = SL:gsub("SHINY Legendary", "**Shiny Legendary"):gsub(" pet!", "**!")
-    return CC
-end
-
-function Godly(G)
-    local CC = G:gsub("GODLY", "**Godly"):gsub(" pet!", "**!")
-    return CC
-end
-
-function ShinyGodly(SG)
-    local CC = SG:gsub("SHINY GODLY", "**Shiny Godly"):gsub(" pet!", "**!")
-    return CC
-end
-
-function Secret(S)
-    local CC = S:gsub("SECRET", "**Secret"):gsub(" pet!", "**!")
-    return CC
-end
-
-function ShinySecret(SS)
-    local CC = SS:gsub("SHINY SECRET", "**Shiny Secret"):gsub(" pet!", "**!")
+function Thing(L)
+    local CC = L:gsub("a Legendary ", "a **Legendary "):gsub("a SHINY SECRET ", "a **Shiny Secret "):gsub("a SHINY Legendary ", "a **Shiny Legendary "):gsub(" pet!", "**!"):gsub("a GODLY ", "a **Godly "):gsub("a SECRET ", "a **Secret "):gsub("a SHINY GODLY ", "a **Shiny Godly ")
     return CC
 end
 
@@ -69,61 +45,44 @@ local Headers = {["content-type"] = "application/json"}
 local Chat = game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.ChatChannelParentFrame["Frame_MessageLogDisplay"].Scroller
 
 -- The Main Function
-local ChatMessage
-local FinalMessage
 local EmbedColor
-local SecretPing
 Chat.ChildAdded:Connect(function(instance)
-    if string.find(instance.TextLabel.Text,"hatched") then
-        if string.find(instance.TextLabel.Text,"a") then
-            ChatMessage = (FormatMessage(instance.TextLabel.Text))
-
+    if string.find(instance.TextLabel.Text,"hatched") and string.find(instance.TextLabel.Text,"a") then
+            local ChatMessage = FormatMessage(instance.TextLabel.Text)
+            local SecretPing = ""
+            local FinalMessage = Thing(ChatMessage)
             -- Formatting With GSubs
             if string.find(instance.TextLabel.Text,"Legendary") then
                 if string.find(instance.TextLabel.Text,"SHINY") then
-                    FinalMessage = ShinyLegendary(ChatMessage)
                     EmbedColor = "9d00ff"
-                    SecretPing = ""
                 else
-                    FinalMessage = Legendary(ChatMessage)
                     EmbedColor = "00eeff"
-                    SecretPing = ""
                 end
             elseif string.find(instance.TextLabel.Text,"GODLY") then
                 if string.find(instance.TextLabel.Text,"SHINY") then
-                    FinalMessage = ShinyGodly(ChatMessage)
                     EmbedColor = "0080ff"
-                    SecretPing = ""
                 else
-                    FinalMessage = Godly(ChatMessage)
                     EmbedColor = "00ff11"
-                    SecretPing = ""
                 end
             elseif string.find(instance.TextLabel.Text,"SECRET") then
                 if string.find(instance.TextLabel.Text,"SHINY") then
-                    FinalMessage = ShinySecret(ChatMessage)
                     EmbedColor = "ffff00"
                     SecretPing = "<@721205421355958272>, You hatched a SHINY SECRET Pet! Congrats!"
                 else
-                    FinalMessage = Secret(ChatMessage)
                     EmbedColor = "ff0062"
                     SecretPing = "<@721205421355958272>, You hatched a SECRET Pet! Congrats!"
                 end
             end
 
             -- Get IDs for Images
-            local Image
-            if string.find(instance.TextLabel.Text,"Bucket O' Charms") then
-                Image = GetThumbnail(210)
-            elseif string.find(instance.TextLabel.Text,"Huge Irish Pegasus") then
-                Image = GetThumbnail(208)
-            elseif string.find(instance.TextLabel.Text,"Pot O' Gold") then
-                Image = GetThumbnail(209)
-            elseif string.find(instance.TextLabel.Text,"Supreme Clover") then
-                Image = GetThumbnail(211)
-            else
-                Image = ""
+            local ID = 0
+            for i,v in pairs(game:GetService("ReplicatedStorage")["Game Objects"]:GetChildren()) do
+                local module = require(v["Pet Module"])
+                if string.find(module.name, instance.TextLabel.Text) then
+                    ID = v.Name
+                end
             end
+            local Image = GetThumbnail(ID)
 
 
             -- Other Features
@@ -157,5 +116,4 @@ Chat.ChildAdded:Connect(function(instance)
                 if syn then HttpRequest = syn.request else HttpRequest = http_request end
                     HttpRequest({Url=Webhook, Body=Info, Method="POST", Headers=Headers})
                 end
-        end
 end)
