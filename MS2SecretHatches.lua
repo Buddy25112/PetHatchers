@@ -91,6 +91,9 @@ _G.HatchAmount = {
     MythicalClover = 0;
     PotOGold = 0;
     Jackpot = 0;
+    DogLucky = 0;
+    Serendipity = 0;
+    Robot20 = 0;
 }
 
 --Load Settings
@@ -862,6 +865,57 @@ Chat.ChildAdded:Connect(function(instance)
                                     PetImage = "https://media.discordapp.net/attachments/749822808288395354/1086367434497347654/Jackpot.png"
                                     hatchamountcounter = _G.HatchAmount.Jackpot + 1
                                     _G.HatchAmount.Jackpot = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                end
+
+                            elseif string.find(instance.TextLabel.Text, "Dog Lucky") then
+                                if string.find(instance.TextLabel.Text, "Shiny") then
+                                    PetChance = "1/500M"
+                                    petname = "Shiny Dog Lucky"
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1088914667079995434/Shiny_Dog_Lucky.png"
+                                    hatchamountcounter = _G.HatchAmount.DogLucky + 1
+                                    _G.HatchAmount.DogLucky = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                else
+                                    PetChance = "1/5.00M"
+                                    petname = "Dog Lucky"
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1088914667335856289/Dog_Lucky.png"
+                                    hatchamountcounter = _G.HatchAmount.DogLucky + 1
+                                    _G.HatchAmount.DogLucky = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                end
+
+                            elseif string.find(instance.TextLabel.Text, "Serendipity") then
+                                if string.find(instance.TextLabel.Text, "Shiny") then
+                                    PetChance = "1/2.00B"
+                                    petname = "Shiny Serendipity"
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1088914666622824458/Shiny_Serendipity.png"
+                                    hatchamountcounter = _G.HatchAmount.Serendipity + 1
+                                    _G.HatchAmount.Serendipity = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                else
+                                    PetChance = "1/20.0M"
+                                    petname = "Serendipity"
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1088914666861903902/Serendipity.png"
+                                    hatchamountcounter = _G.HatchAmount.Serendipity + 1
+                                    _G.HatchAmount.Serendipity = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                end
+
+                            elseif string.find(instance.TextLabel.Text, "Robot 2.0") then
+                                if string.find(instance.TextLabel.Text, "Shiny") then
+                                    PetChance = "1/8.00B"
+                                    petname = "Shiny Robot 2.0"
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1088914666132090950/Shiny_Robot_2.0.png"
+                                    hatchamountcounter = _G.HatchAmount.Robot20 + 1
+                                    _G.HatchAmount.Robot20 = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                else
+                                    PetChance = "1/80.0M"
+                                    petname = "Robot 2.0"
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1088914666354380911/Robot_2.0.png"
+                                    hatchamountcounter = _G.HatchAmount.Robot20 + 1
+                                    _G.HatchAmount.Robot20 = hatchamountcounter
                                     SaveHatchAmountSettings()
                                 end
                             end
