@@ -95,6 +95,9 @@ _G.HatchAmount = {
     DogLucky = 0;
     Serendipity = 0;
     Robot20 = 0;
+    DreamCatcher = 0;
+    LavenderRaven = 0;
+    LuckyPyramidium = 0;
 }
 
 --Load Settings
@@ -725,6 +728,45 @@ Chat.ChildAdded:Connect(function(instance)
                                     PetImage = "https://media.discordapp.net/attachments/749822808288395354/1088914666354380911/Robot_2.0.png"
                                     hatchamountcounter = _G.HatchAmount.Robot20 + 1
                                     _G.HatchAmount.Robot20 = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                end
+
+                            elseif string.find(instance.TextLabel.Text, "Dream Catcher") then
+                                if string.find(instance.TextLabel.Text, "Shiny") then
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1091431551373410304/Shiny_Dream_Catcher.png"
+                                    hatchamountcounter = _G.HatchAmount.DreamCatcher + 1
+                                    _G.HatchAmount.DreamCatcher = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                else
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1091431550937210960/Dream_Catcher.png"
+                                    hatchamountcounter = _G.HatchAmount.DreamCatcher + 1
+                                    _G.HatchAmount.DreamCatcher = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                end
+
+                            elseif string.find(instance.TextLabel.Text, "Lavender Raven") then
+                                if string.find(instance.TextLabel.Text, "Shiny") then
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1091431551662825482/Shiny_Lavender_Raven.png"
+                                    hatchamountcounter = _G.HatchAmount.LavenderRaven + 1
+                                    _G.HatchAmount.LavenderRaven = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                else
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1091431552057081856/Lavender_Raven.png"
+                                    hatchamountcounter = _G.HatchAmount.LavenderRaven + 1
+                                    _G.HatchAmount.LavenderRaven = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                end
+
+                            elseif string.find(instance.TextLabel.Text, "Lucky Pyramidium") then
+                                if string.find(instance.TextLabel.Text, "Shiny") then
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1091431549888647218/Shiny_Lucky_Pyramidium.png"
+                                    hatchamountcounter = _G.HatchAmount.LuckyPyramidium + 1
+                                    _G.HatchAmount.LuckyPyramidium = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                else
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1091431552531046450/Lucky_Pyramidium.png"
+                                    hatchamountcounter = _G.HatchAmount.LuckyPyramidium + 1
+                                    _G.HatchAmount.LuckyPyramidium = hatchamountcounter
                                     SaveHatchAmountSettings()
                                 end
                             else
