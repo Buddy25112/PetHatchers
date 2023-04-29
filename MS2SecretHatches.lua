@@ -106,6 +106,8 @@ _G.HatchAmount = {
     BlossomDogcat = 0;
     SpringShard = 0;
     IllustriousDefender = 0;
+    EternalCucumber = 0;
+    Resurrection = 0;
 }
 
 --Load Settings
@@ -708,6 +710,30 @@ Chat.ChildAdded:Connect(function(instance)
                                     _G.HatchAmount.IllustriousDefender = hatchamountcounter
                                     SaveHatchAmountSettings()
                                 end
+                            elseif string.find(instance.TextLabel.Text, "Eternal Cucumber") then
+                                if string.find(instance.TextLabel.Text, "Shiny") then
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1101586130341736559/Shiny_Eternal_Cucumber.png"
+                                    hatchamountcounter = _G.HatchAmount.EternalCucumber + 1
+                                    _G.HatchAmount.EternalCucumber = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                else
+                                    PetImage = "https://media.discordapp.net/attachments/749822808288395354/1101586130085871616/Eternal_Cucumber.png"
+                                    hatchamountcounter = _G.HatchAmount.EternalCucumber + 1
+                                    _G.HatchAmount.EternalCucumber = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                end
+                                elseif string.find(instance.TextLabel.Text, "Resurrection") then
+                                    if string.find(instance.TextLabel.Text, "Shiny") then
+                                        PetImage = "https://media.discordapp.net/attachments/749822808288395354/1101586130819874967/Shiny_Resurrection.png"
+                                        hatchamountcounter = _G.HatchAmount.Resurrection + 1
+                                        _G.HatchAmount.Resurrection = hatchamountcounter
+                                        SaveHatchAmountSettings()
+                                    else
+                                        PetImage = "https://media.discordapp.net/attachments/749822808288395354/1101586130551443557/Resurrection.png"
+                                        hatchamountcounter = _G.HatchAmount.Resurrection + 1
+                                        _G.HatchAmount.Resurrection = hatchamountcounter
+                                        SaveHatchAmountSettings()
+                                    end
                             else
                                 hatchamountcounter = "N/A"
                                 if string.find(instance.TextLabel.Text,"Secret") then
