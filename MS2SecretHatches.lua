@@ -108,6 +108,12 @@ _G.HatchAmount = {
     IllustriousDefender = 0;
     EternalCucumber = 0;
     Resurrection = 0;
+    VoidChampion = 0;
+    AquaChampion = 0;
+    FlameChampion = 0;
+    WindChampion = 0;
+    LightChampion = 0;
+    KingDoggy = 0;
 }
 
 --Load Settings
@@ -722,18 +728,78 @@ Chat.ChildAdded:Connect(function(instance)
                                     _G.HatchAmount.EternalCucumber = hatchamountcounter
                                     SaveHatchAmountSettings()
                                 end
-                                elseif string.find(instance.TextLabel.Text, "Resurrection") then
-                                    if string.find(instance.TextLabel.Text, "Shiny") then
-                                        PetImage = "https://media.discordapp.net/attachments/749822808288395354/1101586130819874967/Shiny_Resurrection.png"
-                                        hatchamountcounter = _G.HatchAmount.Resurrection + 1
-                                        _G.HatchAmount.Resurrection = hatchamountcounter
-                                        SaveHatchAmountSettings()
-                                    else
-                                        PetImage = "https://media.discordapp.net/attachments/749822808288395354/1101586130551443557/Resurrection.png"
-                                        hatchamountcounter = _G.HatchAmount.Resurrection + 1
-                                        _G.HatchAmount.Resurrection = hatchamountcounter
-                                        SaveHatchAmountSettings()
-                                    end
+                            elseif string.find(instance.TextLabel.Text, "Void Champion") then
+                                if string.find(instance.TextLabel.Text, "Shiny") then
+                                    PetImage = "https://media.discordapp.net/attachments/750156768834879488/1105707665449037855/Void_Champion.png"
+                                    hatchamountcounter = _G.HatchAmount.VoidChampion + 1
+                                    _G.HatchAmount.VoidChampion = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                else
+                                    PetImage = "https://media.discordapp.net/attachments/750156768834879488/1105707665449037855/Void_Champion.png"
+                                    hatchamountcounter = _G.HatchAmount.VoidChampion + 1
+                                    _G.HatchAmount.VoidChampion = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                end
+                            elseif string.find(instance.TextLabel.Text, "Light Champion") then
+                                if string.find(instance.TextLabel.Text, "Shiny") then
+                                    PetImage = "https://media.discordapp.net/attachments/750156768834879488/1105707586831003658/Light_Champion.png"
+                                    hatchamountcounter = _G.HatchAmount.LightChampion + 1
+                                    _G.HatchAmount.LightChampion = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                else
+                                    PetImage = "https://media.discordapp.net/attachments/750156768834879488/1105707586831003658/Light_Champion.png"
+                                    hatchamountcounter = _G.HatchAmount.LightChampion + 1
+                                    _G.HatchAmount.LightChampion = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                end
+                            elseif string.find(instance.TextLabel.Text, "Aqua Champion") then
+                                if string.find(instance.TextLabel.Text, "Shiny") then
+                                    PetImage = "https://media.discordapp.net/attachments/750156768834879488/1089684570330378341/No_Pet_Image_Uploaded_Secret-removebg-preview.png"
+                                    hatchamountcounter = _G.HatchAmount.AquaChampion + 1
+                                    _G.HatchAmount.AquaChampion = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                else
+                                    PetImage = "https://media.discordapp.net/attachments/750156768834879488/1089684570330378341/No_Pet_Image_Uploaded_Secret-removebg-preview.png"
+                                    hatchamountcounter = _G.HatchAmount.AquaChampion + 1
+                                    _G.HatchAmount.AquaChampion = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                end
+                            elseif string.find(instance.TextLabel.Text, "Flame Champion") then
+                                if string.find(instance.TextLabel.Text, "Shiny") then
+                                    PetImage = "https://media.discordapp.net/attachments/750156768834879488/1089684570330378341/No_Pet_Image_Uploaded_Secret-removebg-preview.png"
+                                    hatchamountcounter = _G.HatchAmount.FlameChampion + 1
+                                    _G.HatchAmount.FlameChampion = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                else
+                                    PetImage = "https://media.discordapp.net/attachments/750156768834879488/1089684570330378341/No_Pet_Image_Uploaded_Secret-removebg-preview.png"
+                                    hatchamountcounter = _G.HatchAmount.FlameChampion + 1
+                                    _G.HatchAmount.FlameChampion = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                end
+                            elseif string.find(instance.TextLabel.Text, "Wind Champion") then
+                                if string.find(instance.TextLabel.Text, "Shiny") then
+                                    PetImage = "https://media.discordapp.net/attachments/750156768834879488/1089684570330378341/No_Pet_Image_Uploaded_Secret-removebg-preview.png"
+                                    hatchamountcounter = _G.HatchAmount.WindChampion + 1
+                                    _G.HatchAmount.WindChampion = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                else
+                                    PetImage = "https://media.discordapp.net/attachments/750156768834879488/1089684570330378341/No_Pet_Image_Uploaded_Secret-removebg-preview.png"
+                                    hatchamountcounter = _G.HatchAmount.WindChampion + 1
+                                    _G.HatchAmount.WindChampion = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                end
+                            elseif string.find(instance.TextLabel.Text, "King Doggy") then
+                                if string.find(instance.TextLabel.Text, "Shiny") then
+                                    PetImage = "https://media.discordapp.net/attachments/750156768834879488/1089684569973870682/No_Pet_Image_Uploaded_ancient-removebg-preview.png"
+                                    hatchamountcounter = _G.HatchAmount.KingDoggy + 1
+                                    _G.HatchAmount.KingDoggy = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                else
+                                    PetImage = "https://media.discordapp.net/attachments/750156768834879488/1089684569973870682/No_Pet_Image_Uploaded_ancient-removebg-preview.png"
+                                    hatchamountcounter = _G.HatchAmount.KingDoggy + 1
+                                    _G.HatchAmount.KingDoggy = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                end
                             else
                                 hatchamountcounter = "N/A"
                                 if string.find(instance.TextLabel.Text,"Secret") then
