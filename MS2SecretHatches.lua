@@ -826,6 +826,7 @@ Chat.ChildAdded:Connect(function(instance)
                             local Webhook = _G.Webhooksss
                             local Time = os.date('!*t', OSTime)
                             
+                            
                             -- Shiny/Normal Secret Info
                             local SecretHatchCounter
                             local NewColor
@@ -905,10 +906,8 @@ Chat.ChildAdded:Connect(function(instance)
                                         ["inline"] = true
                                     }
                                 },}}}
-                                local Info = game:GetService("HttpService"):JSONEncode(Info)
-                                local HttpRequest = http_request;
-                                if syn then HttpRequest = syn.request else HttpRequest = http_request end
-                                    HttpRequest({Url=Webhook, Body=Info, Method="POST", Headers=Headers})
+                                request = http_request or request or HttpPost or syn.request
+                                request({Url = _G.Webhooksss, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game.HttpService:JSONEncode(Info)})
                                 end
                             end
                         end
