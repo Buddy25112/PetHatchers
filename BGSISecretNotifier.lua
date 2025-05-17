@@ -9,7 +9,8 @@ _G.HatchAmount = {
     QueenKitty = 0;
     TheProphet = 0;
     D0GGY1337 = 0;
-    Prismatic = 0;
+    HyperwaveKitty = 0;
+    RoyalGuardian = 0;
     
 }
 
@@ -73,7 +74,7 @@ SystemMessageRemote.OnClientEvent:Connect(function(Message, Which)
                 Shiny = IsShiny,
                 Mythic = IsMythic,
             }
-                    if PetData.Name == "The Overlord" or PetData.Name == "King Doggy" or PetData.Name == "Mech Robot" or PetData.Name == "Wolflord" or PetData.Name == "Lord Shock" or PetData.Name == "The Prophet" or PetData.Name == "Queen Kitty" or PetData.Name == "D0GGY1337" then
+                    if PetData.Name == "The Overlord" or PetData.Name == "King Doggy" or PetData.Name == "Mech Robot" or PetData.Name == "Wolflord" or PetData.Name == "Lord Shock" or PetData.Name == "The Prophet" or PetData.Name == "Queen Kitty" or PetData.Name == "D0GGY1337" and username == game:GetService("Players").LocalPlayer.Name then
                         
                         -- Get Hatcher Info
                         local count
@@ -107,10 +108,9 @@ SystemMessageRemote.OnClientEvent:Connect(function(Message, Which)
                             elseif username == "BuddyHatchAlt9" then
                                 count = game:GetService("Players").BuddyHatchAlt9.leaderstats["\240\159\165\154 Hatches"].Value
                             end
-
+                        
                         if username == "buddy25112" or username == "buddy25113" or username == "BuddyHatchAlt4" or username == "BuddyHatchAlt5" or username == "BuddyHatchAlt6" or username == "BuddyHatchAlt7" or username == "BuddyHatchAlt1" or username == "AJ_GamingYYTT" or username == "BuddyHatchAlt8" or username == "BuddyHatchAlt9" or username == "BuddyHatchAlt10" or username == "BuddyHatchAlt11" then
-                            LoadHatchAmountSettings()
-                            
+                            LoadHatchAmountSettings()  
                             -- Get Pet Info
                             local petname
                             if PetData.Shiny == true and PetData.Mythic == false then
@@ -203,32 +203,6 @@ SystemMessageRemote.OnClientEvent:Connect(function(Message, Which)
                                     _G.HatchAmount.MechRobot = hatchamountcounter
                                     SaveHatchAmountSettings()
                                     ManualPetChance = "1/66.6M"
-                                end
-                            elseif PetData.Name == "Wolflord" then
-                                if PetData.Shiny == true and PetData.Mythic == false then
-                                    PetImage = "https://cdn.discordapp.com/attachments/750156768834879488/1373152669124001832/latest.png?ex=68295f94&is=68280e14&hm=ac880e447adf3ae95786f861d45c25d54f1e1e7ea3e16ca96b6b3e06df623178&"
-                                    hatchamountcounter = _G.HatchAmount.Wolflord + 1
-                                    _G.HatchAmount.Wolflord = hatchamountcounter
-                                    SaveHatchAmountSettings()
-                                    ManualPetChance = "1/4.00B"
-                                elseif PetData.Shiny == false and PetData.Mythic == true then
-                                    PetImage = "https://cdn.discordapp.com/attachments/750156768834879488/1373152689051144263/latest.png?ex=68295f99&is=68280e19&hm=ccea8553cec7b5a66a1f90bf684abd8cf60e1a0b3627e55615d827dff6dd0770&"
-                                    hatchamountcounter = _G.HatchAmount.Wolflord + 1
-                                    _G.HatchAmount.Wolflord = hatchamountcounter
-                                    SaveHatchAmountSettings()
-                                    ManualPetChance = "1/10.0B"
-                                elseif PetData.Shiny == true and PetData.Mythic == true then
-                                    PetImage = "https://cdn.discordapp.com/attachments/750156768834879488/1373152715428859905/latest.png?ex=68295f9f&is=68280e1f&hm=1fcedb6734cad8b127d2b3744b19df1f736eaf7f61d69178e2a56497a86c2363&"
-                                    hatchamountcounter = _G.HatchAmount.Wolflord + 1
-                                    _G.HatchAmount.Wolflord = hatchamountcounter
-                                    SaveHatchAmountSettings()
-                                    ManualPetChance = "1/400B"
-                                else
-                                    PetImage = "https://cdn.discordapp.com/attachments/750156768834879488/1373152631769403504/latest.png?ex=68295f8b&is=68280e0b&hm=65f18d890b8aab53c2a6370f6c54001f24e57cafc66de9be4e41f0a570cb1c5a&"
-                                    hatchamountcounter = _G.HatchAmount.Wolflord + 1
-                                    _G.HatchAmount.Wolflord = hatchamountcounter
-                                    SaveHatchAmountSettings()
-                                    ManualPetChance = "1/100M"
                                 end
                             elseif PetData.Name == "Lord Shock" then
                                 if PetData.Shiny == true and PetData.Mythic == false then
@@ -333,6 +307,58 @@ SystemMessageRemote.OnClientEvent:Connect(function(Message, Which)
                                     _G.HatchAmount.D0GGY1337 = hatchamountcounter
                                     SaveHatchAmountSettings()
                                     ManualPetChance = "1/50.0M"
+                                end
+                            elseif PetData.Name == "Hyperwave Kitty" then
+                                if PetData.Shiny == true and PetData.Mythic == false then
+                                    PetImage = "https://cdn.discordapp.com/attachments/750156768834879488/1373433121260961814/latest.png?ex=682a64c5&is=68291345&hm=a6266e4dcfbee3e829bc1c87d59f3f84be0cf2c4d4743a28d6de2f8a1e4b10d6&"
+                                    hatchamountcounter = _G.HatchAmount.HyperwaveKitty + 1
+                                    _G.HatchAmount.HyperwaveKitty = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                    ManualPetChance = "1/5.00B"
+                                elseif PetData.Shiny == false and PetData.Mythic == true then
+                                    PetImage = "https://cdn.discordapp.com/attachments/750156768834879488/1373433145856229586/latest.png?ex=682a64cb&is=6829134b&hm=5f955c511523405d0b501669e3ac1903d80f3bf8a7f84a87c393dbf76f74a4c9&"
+                                    hatchamountcounter = _G.HatchAmount.HyperwaveKitty + 1
+                                    _G.HatchAmount.HyperwaveKitty = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                    ManualPetChance = "1/12.50B"
+                                elseif PetData.Shiny == true and PetData.Mythic == true then
+                                    PetImage = "https://cdn.discordapp.com/attachments/750156768834879488/1373433166915829831/latest.png?ex=682a64d0&is=68291350&hm=a6848536f9dacd9dd5fc60ee9e2b99f1c0a3cd01bf822ebdf8cf6e42dfe13af9&"
+                                    hatchamountcounter = _G.HatchAmount.HyperwaveKitty + 1
+                                    _G.HatchAmount.HyperwaveKitty = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                    ManualPetChance = "1/500B"
+                                else
+                                    PetImage = "https://cdn.discordapp.com/attachments/750156768834879488/1373433096241676451/latest.png?ex=682a64bf&is=6829133f&hm=2f8600dd5e8556d716cff9af459761f6903dfc955ba063f50818bb903edc8292&"
+                                    hatchamountcounter = _G.HatchAmount.HyperwaveKitty + 1
+                                    _G.HatchAmount.HyperwaveKitty = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                    ManualPetChance = "1/125M"
+                                end
+                            elseif PetData.Name == "Royal Guardian" then
+                                if PetData.Shiny == true and PetData.Mythic == false then
+                                    PetImage = "https://cdn.discordapp.com/attachments/750156768834879488/1373435432859074630/latest.png?ex=682a66ec&is=6829156c&hm=a78b0f80eeabbe48f3bde3729c4b098f0fe9c8f9688d38a31a1431a03f77398f&"
+                                    hatchamountcounter = _G.HatchAmount.RoyalGuardian + 1
+                                    _G.HatchAmount.RoyalGuardian = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                    ManualPetChance = "1/8.00B"
+                                elseif PetData.Shiny == false and PetData.Mythic == true then
+                                    PetImage = "https://cdn.discordapp.com/attachments/750156768834879488/1373435432859074630/latest.png?ex=682a66ec&is=6829156c&hm=a78b0f80eeabbe48f3bde3729c4b098f0fe9c8f9688d38a31a1431a03f77398f&"
+                                    hatchamountcounter = _G.HatchAmount.RoyalGuardian + 1
+                                    _G.HatchAmount.RoyalGuardian = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                    ManualPetChance = "1/20.0B"
+                                elseif PetData.Shiny == true and PetData.Mythic == true then
+                                    PetImage = "https://cdn.discordapp.com/attachments/750156768834879488/1373434508967415840/268.png?ex=682a6610&is=68291490&hm=82a998e2f540538c2455c2dcb083d9a2dcdaecf61c1c02d127336e71f6aa5522&"
+                                    hatchamountcounter = _G.HatchAmount.RoyalGuardian + 1
+                                    _G.HatchAmount.RoyalGuardian = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                    ManualPetChance = "1/800B"
+                                else
+                                    PetImage = "https://cdn.discordapp.com/attachments/750156768834879488/1373434421285359616/latest.png?ex=682a65fb&is=6829147b&hm=0ce8901f6d6fc19bdfe40cb7f0c087e434d6c5fb171955755e209a2b8f189198&"
+                                    hatchamountcounter = _G.HatchAmount.RoyalGuardian + 1
+                                    _G.HatchAmount.RoyalGuardian = hatchamountcounter
+                                    SaveHatchAmountSettings()
+                                    ManualPetChance = "1/200M"
                                 end
                             end
                             
