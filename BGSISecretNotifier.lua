@@ -336,13 +336,13 @@ SystemMessageRemote.OnClientEvent:Connect(function(Message, Which)
                                 end
                             elseif PetData.Name == "Royal Guardian" then
                                 if PetData.Shiny == true and PetData.Mythic == false then
-                                    PetImage = "https://cdn.discordapp.com/attachments/750156768834879488/1373435432859074630/latest.png?ex=682a66ec&is=6829156c&hm=a78b0f80eeabbe48f3bde3729c4b098f0fe9c8f9688d38a31a1431a03f77398f&"
+                                    PetImage = "https://cdn.discordapp.com/attachments/750156768834879488/1373473775642738788/latest.png?ex=682a8aa2&is=68293922&hm=7367ee5f72884bf6d940bc52f545f0952f6cbacae76c46ecc8be4b22bfaf1b8e&"
                                     hatchamountcounter = _G.HatchAmount.RoyalGuardian + 1
                                     _G.HatchAmount.RoyalGuardian = hatchamountcounter
                                     SaveHatchAmountSettings()
                                     ManualPetChance = "1/8.00B"
                                 elseif PetData.Shiny == false and PetData.Mythic == true then
-                                    PetImage = "https://cdn.discordapp.com/attachments/750156768834879488/1373435432859074630/latest.png?ex=682a66ec&is=6829156c&hm=a78b0f80eeabbe48f3bde3729c4b098f0fe9c8f9688d38a31a1431a03f77398f&"
+                                    PetImage = "https://cdn.discordapp.com/attachments/750156768834879488/1373473809012621373/latest.png?ex=682a8aa9&is=68293929&hm=76c77d2b0146922895210910abb5c18ebfa232311ad9715bf3fda5ec16a871e1&"
                                     hatchamountcounter = _G.HatchAmount.RoyalGuardian + 1
                                     _G.HatchAmount.RoyalGuardian = hatchamountcounter
                                     SaveHatchAmountSettings()
