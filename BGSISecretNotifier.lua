@@ -74,8 +74,7 @@ SystemMessageRemote.OnClientEvent:Connect(function(Message, Which)
                 Shiny = IsShiny,
                 Mythic = IsMythic,
             }
-                    if PetData.Name == "The Overlord" or PetData.Name == "King Doggy" or PetData.Name == "Mech Robot" or PetData.Name == "Wolflord" or PetData.Name == "Lord Shock" or PetData.Name == "The Prophet" or PetData.Name == "Queen Kitty" or PetData.Name == "D0GGY1337" and username == game:GetService("Players").LocalPlayer.Name then
-                        
+            if PetData.Name == "The Overlord" or PetData.Name == "King Doggy" or PetData.Name == "Mech Robot" or PetData.Name == "Lord Shock" or PetData.Name == "The Prophet" or PetData.Name == "Queen Kitty" or PetData.Name == "D0GGY1337" or PetData.Name == "Hyperwave Kitty" or PetData.Name == "Royal Guardian" then
                         -- Get Hatcher Info
                         local count
                         if username == "buddy25112" then
